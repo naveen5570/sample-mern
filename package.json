@@ -12,8 +12,11 @@
   "author": "James Vickery",
   "license": "MIT",
   "dependencies": {
+    "bcrypt": "^5.0.1",
     "body-parser": "^1.18.3",
+    "config": "^3.3.7",
     "express": "^4.16.4",
+    "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.7.5",
     "nodemon": "^2.0.18",
     "password-generator": "^2.3.2"
