@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import '../App.css';
 import axios, { Axios } from 'axios';
 import { Link } from 'react-router-dom';
+import jwtDecode from 'jwt-decode';
 import Stripe from 'react-stripe-checkout';
 
 class UserRegister extends Component {
@@ -13,7 +14,20 @@ class UserRegister extends Component {
       password:''
     };
   }
+  componentDidMount() {
+    if(localStorage.getItem("token"))
+    {
 
+    
+    const token = localStorage.getItem("token");
+    if(token)
+    {
+      window.location.href = "/create-request";
+    }
+    const u = jwtDecode(token);
+    console.log(u.id);
+  }
+}
 
 
   onChange = e => {

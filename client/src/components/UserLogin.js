@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import '../App.css';
 import axios from 'axios';
+import jwtDecode from 'jwt-decode';
 import { Link } from 'react-router-dom';
 
 class UserLogin extends Component {
@@ -12,7 +13,20 @@ class UserLogin extends Component {
       password:''
     };
   }
-  
+  componentDidMount() {
+    if(localStorage.getItem("token"))
+    {
+
+    
+    const token = localStorage.getItem("token");
+    if(token)
+    {
+      window.location.href = "/create-request";
+    }
+    const u = jwtDecode(token);
+    console.log(u.id);
+  }
+}
   onChange = e => {
     this.setState({ [e.target.name]: e.target.value });
   };
