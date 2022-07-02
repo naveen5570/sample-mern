@@ -13,7 +13,7 @@ class Dashboard extends Component {
 
   componentDidMount() {
     axios
-      .get('https://1835-103-81-212-22.ngrok.io/api/users', {
+      .get('/api/users', {
         headers: {
          'x-auth-header':localStorage.getItem('token') 
         }

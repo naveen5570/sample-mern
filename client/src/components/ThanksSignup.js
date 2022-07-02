@@ -25,7 +25,7 @@ class ThanksSignup extends Component {
     };
 
     axios
-      .post('https://1835-103-81-212-22.ngrok.io/api/users',data)
+      .post('/api/users',data)
       .then(res => {
         this.setState({
           phone: ''

@@ -26,7 +26,7 @@ class ForgotPassword extends Component {
     };
 
     axios
-      .post('https://1835-103-81-212-22.ngrok.io/api/users/forgot-password', data)
+      .post('/api/users/forgot-password', data)
       .then(res => {
         this.setState({
           

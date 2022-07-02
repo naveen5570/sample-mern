@@ -29,7 +29,7 @@ class ProfessionalRegister extends Component {
     };
 
     axios
-      .post('https://1835-103-81-212-22.ngrok.io/api/professionals',data)
+      .post('/api/professionals',data)
       .then(res => {
         this.setState({
           name: '',
@@ -39,7 +39,7 @@ class ProfessionalRegister extends Component {
         //alert(res.data.msg);
         if(res.status==200)
         {
-        window.location.href = "https://mern-nav.herokuapp.com/professional-phone-otp";
+        window.location.href = "/professional-phone-otp";
         }
         else
         {
@@ -47,7 +47,7 @@ class ProfessionalRegister extends Component {
         }
       })
       .catch(err => {
-        alert(err.data.msg);
+        
         console.log("Error in CreateBook!");
       })
   };

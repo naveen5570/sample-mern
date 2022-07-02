@@ -14,18 +14,7 @@ class UserRegister extends Component {
     };
   }
 
-  handleToken = (totalAmount,token)=>{
-    try{
-      axios.post("https://1835-103-81-212-22.ngrok.io/api/stripe/pay",{
-        token: token.id,
-        amount: totalAmount
-      });
-
-    }catch(error){
-      console.log(error);
-    }
-  }
-
+  
 
 
   onChange = e => {
@@ -34,6 +23,20 @@ class UserRegister extends Component {
 
   
   render() {
+
+    const handleToken = (totalAmount,token)=>{
+      try{
+        axios.post("/api/stripe/pay",{
+          token: token.id,
+          amount: totalAmount
+        });
+  
+      }catch(error){
+        console.log(error);
+      }
+    }
+  
+
     const tokenHandler = (token)=>{
         handleToken(100,token);
       }

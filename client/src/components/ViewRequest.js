@@ -26,7 +26,7 @@ class ViewRequest extends Component {
     const params = this.props.params;
     // console.log("Print id: " + this.props.match.params.id);
     axios
-      .get('https://1835-103-81-212-22.ngrok.io/api/requests/'+params.id)
+      .get('/api/requests/'+params.id)
       .then(res => {
         //console.log("Print-showapplicationDetails-API-response: " + JSON.stringify(res.data));
         this.setState({

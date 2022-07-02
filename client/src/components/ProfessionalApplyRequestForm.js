@@ -44,7 +44,7 @@ class ProfessionalApplyRequestForm extends Component {
     };
     
     axios
-      .post('https://1835-103-81-212-22.ngrok.io/api/requests/apply', data)
+      .post('/api/requests/apply', data)
       .then(res => {
         this.setState({
           time_of_service:"",
@@ -69,7 +69,7 @@ class ProfessionalApplyRequestForm extends Component {
     const params = this.props.params;
     console.log(params.id);
     axios
-      .get('https://1835-103-81-212-22.ngrok.io/api/requests/'+params.id)
+      .get('/api/requests/'+params.id)
       .then(res => {
         this.setState({
           reqqs: res.data
@@ -94,7 +94,7 @@ class ProfessionalApplyRequestForm extends Component {
       <div className="row">
         <div className="col-md-2">
           
-        <Link to='/'><img src="https://mern-nav.herokuapp.com/img/logo.jpg"/></Link>
+        <Link to='/'><img src="./img/logo.jpg"/></Link>
         </div>
         <div className="col-md-7">
       

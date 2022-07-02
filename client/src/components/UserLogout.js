@@ -16,7 +16,7 @@ class UserLogout extends Component {
 
   componentDidMount() {
     localStorage.removeItem("token");
-    window.location.href = "https://mern-nav.herokuapp.com/";
+    window.location.href = "/";
     
       
   };

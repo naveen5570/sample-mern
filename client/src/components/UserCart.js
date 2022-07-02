@@ -27,7 +27,7 @@ class ProfessionalApplyRequestForm extends Component {
     const params = this.props.params;
     // console.log("Print id: " + this.props.match.params.id);
     axios
-      .get('https://1835-103-81-212-22.ngrok.io/api/applications/view-application/'+params.id)
+      .get('/api/applications/view-application/'+params.id)
       .then(res => {
         //console.log("Print-showapplicationDetails-API-response: " + JSON.stringify(res.data));
         this.setState({
@@ -56,7 +56,7 @@ class ProfessionalApplyRequestForm extends Component {
 
     const handleToken = (totalAmount,token)=>{
         try{
-          axios.post("https://c22c-103-81-212-68.ngrok.io/api/stripe/pay",{
+          axios.post("/api/stripe/pay",{
             token: token.id,
             amount: totalAmount,
             req_id: applications.map((application) => (
@@ -65,7 +65,7 @@ class ProfessionalApplyRequestForm extends Component {
           }).then(res => {
             //console.log("Print-showapplicationDetails-API-response: " + JSON.stringify(res.data));
             
-            window.location.href = "https://mern-nav.herokuapp.com/hired-successfully"; 
+            window.location.href = "/hired-successfully"; 
 
           })
           .catch(err => {
@@ -89,7 +89,7 @@ class ProfessionalApplyRequestForm extends Component {
       <div className="row">
         <div className="col-md-2">
           
-        <Link to='/'><img src="https://mern-nav.herokuapp.com/img/logo.jpg"/></Link>
+        <Link to='/'><img src="./img/logo.jpg"/></Link>
         </div>
         <div className="col-md-7">
       

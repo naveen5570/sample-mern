@@ -14,7 +14,7 @@ class ShowBookList extends Component {
 
   componentDidMount() {
     axios
-      .get('https://1835-103-81-212-22.ngrok.io/api/books')
+      .get('/api/books')
       .then(res => {
         this.setState({
           books: res.data

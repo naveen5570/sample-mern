@@ -27,7 +27,7 @@ class UserLogin extends Component {
     };
 
     axios
-      .post('https://1835-103-81-212-22.ngrok.io/api/users/login', data)
+      .post('/api/users/login', data)
       .then(res => {
         this.setState({
           email:'',
@@ -36,7 +36,7 @@ class UserLogin extends Component {
         //alert(res.status);
         if(res.status==200)
         {
-        window.location.href = "https://mern-nav.herokuapp.com/create-request"; 
+        window.location.href = "/create-request"; 
         //window.location.href = "http://localhost:3000/create-request"; 
         }
         else

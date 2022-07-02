@@ -25,13 +25,13 @@ class OtpPhone extends Component {
     };
 
     axios
-      .post('https://1835-103-81-212-22.ngrok.io/api/users',data)
+      .post('/api/users',data)
       .then(res => {
         this.setState({
           phone: ''
         });
         //alert(res.data.msg);
-        window.location.href = "https://mern-nav.herokuapp.com/otp-verify";
+        window.location.href = "/otp-verify";
       })
       .catch(err => {
         alert(err.data.msg);

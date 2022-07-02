@@ -33,7 +33,7 @@ class Professional extends Component {
     const token = localStorage.getItem("professional-token");
     if(!token)
     {
-      window.location.href = "https://mern-nav.herokuapp.com/login-as-professional";
+      window.location.href = "/login-as-professional";
     }
     const u = jwtDecode(token);
     console.log(u.id);
@@ -73,7 +73,7 @@ class Professional extends Component {
     };
 
     axios
-      .post('https://1835-103-81-212-22.ngrok.io/api/professionals/profile', data)
+      .post('/api/professionals/profile', data)
       .then(res => {
         this.setState({
           name:'',
@@ -95,7 +95,7 @@ class Professional extends Component {
           status: ''
         });
         //alert("Profile updated");
-        window.location.href = "https://mern-nav.herokuapp.com/profile-updated";
+        window.location.href = "/profile-updated";
       })
       .catch(err => {
         //alert(err.data.msg);
@@ -126,7 +126,7 @@ class Professional extends Component {
       <div className="row">
         <div className="col-md-2">
           
-        <Link to='/'><img src="./img/logo.jpg"/></Link>
+        <Link to='/'><img src="./img/logo.jpg" alt="logo"/></Link>
         </div>
         <div className="col-md-7">
       

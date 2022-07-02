@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import '../App.css';
 import axios from 'axios';
-import { Link } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
 import jwtDecode from 'jwt-decode';
 import ReqCard from './ReqCard';
 import Header from './Header';
@@ -15,14 +15,14 @@ class RequestList extends Component {
   }
 
   componentDidMount() {
-    /*const token = localStorage.getItem("professional-token");
+    const token = localStorage.getItem("professional-token");
     if(!token)
     {
-      window.location.href = "https://mern-nav.herokuapp.com/login-as-professional";
+      window.location.href = "/login-as-professional";
     }
     const u = jwtDecode(token);
     console.log(u.id);
-    */
+    
     axios
       .get('/api/requests/request-list')
       .then(res => {
@@ -57,7 +57,7 @@ class RequestList extends Component {
       <div className="row">
         <div className="col-md-2">
           
-        <img src="./img/logo.jpg"/>
+        <Link to='/' ><img src="./img/logo.jpg"/></Link>
         </div>
         <div className="col-md-7">
       
@@ -71,7 +71,7 @@ class RequestList extends Component {
       </div>
       <div className="container-fluid">
       <div className='row'>
-        
+        <Header />
         <div className='col-md-10 menu-right'>
       
       <div className="ShowBookList">

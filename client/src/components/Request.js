@@ -27,7 +27,7 @@ class Request extends Component {
     const token = localStorage.getItem("token");
     if(!token)
     {
-      window.location.href = "https://mern-nav.herokuapp.com/";
+      window.location.href = "/";
     }
     const u = jwtDecode(token);
     console.log(u.id);
@@ -64,7 +64,7 @@ class Request extends Component {
     };
     //alert('clicked');
     axios
-      .post('https://1835-103-81-212-22.ngrok.io/api/requests/place', data)
+      .post('/api/requests/place', data)
       .then(res => {
         this.setState({
           specialisation:'',
@@ -80,7 +80,7 @@ class Request extends Component {
           user_id:''
         });
         //alert(res.data.msg);
-        window.location.href = "https://mern-nav.herokuapp.com/request-created"; 
+        window.location.href = "/request-created"; 
       })
       .catch(err => {
         //alert(err.data.msg);
@@ -111,7 +111,7 @@ class Request extends Component {
       <div className="row">
         <div className="col-md-2">
           
-        <Link to='/'><img src="./img/logo.jpg"/></Link>
+        <Link to='/'><img src="./img/logo.jpg" alt="t"/></Link>
         </div>
         <div className="col-md-7">
       

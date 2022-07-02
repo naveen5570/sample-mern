@@ -4,7 +4,6 @@ import axios from 'axios';
 import jwtDecode from 'jwt-decode';
 import { Link,useParams } from 'react-router-dom';
 import ReqCard from './AppCard';
-import Header from './Header';
 
 class RequestApplication extends Component {
   constructor(props) {
@@ -18,14 +17,14 @@ class RequestApplication extends Component {
     const token = localStorage.getItem("token");
     if(!token)
     {
-      window.location.href = "https://mern-nav.herokuapp.com/";
+      window.location.href = "/";
     }
     const u = jwtDecode(token);
     
     const params = this.props.params;
     console.log(u.id);
     axios
-      .get('https://1835-103-81-212-22.ngrok.io/api/applications/request-applications/'+params.id)
+      .get('/api/applications/request-applications/'+params.id)
       .then(res => {
         this.setState({
           reqqs: res.data
@@ -58,7 +57,7 @@ class RequestApplication extends Component {
       <div className="row">
         <div className="col-md-2">
           
-        <Link to='/'><img src="https://mern-nav.herokuapp.com/img/logo.jpg"/></Link>
+        <Link to='/'><img src="./img/logo.jpg"/></Link>
         </div>
         <div className="col-md-7">
       

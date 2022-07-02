@@ -26,7 +26,7 @@ class RequestCreated extends Component {
     };
 
     axios
-      .post('https://c22c-103-81-212-68.ngrok.io/api/users',data)
+      .post('/api/users',data)
       .then(res => {
         this.setState({
           phone: ''

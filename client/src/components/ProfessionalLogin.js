@@ -26,7 +26,7 @@ class UserLogin extends Component {
     };
 
     axios
-      .post('https://1835-103-81-212-22.ngrok.io/api/professionals/login', data)
+      .post('/api/professionals/login', data)
       .then(res => {
         this.setState({
           email:'',
@@ -43,11 +43,11 @@ class UserLogin extends Component {
           console.log(res.data.city);
         if(res.data.city!=undefined)
         {
-        window.location.href = "https://mern-nav.herokuapp.com/request-list"; 
+        window.location.href = "/request-list"; 
         }
         else
         {
-          window.location.href = "https://mern-nav.herokuapp.com/professional-profile";   
+          window.location.href = "/professional-profile";   
         }
         }
         else

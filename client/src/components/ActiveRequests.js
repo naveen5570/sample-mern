@@ -18,12 +18,12 @@ class ActiveRequests extends Component {
     const token = localStorage.getItem("token");
     if(!token)
     {
-      window.location.href = "https://mern-nav.herokuapp.com/";
+      window.location.href = "/";
     }
     const u = jwtDecode(token);
     console.log(u.id);
     axios
-      .get('https://1835-103-81-212-22.ngrok.io/api/requests/active-requests/'+u.id)
+      .get('/api/requests/active-requests/'+u.id)
       .then(res => {
         this.setState({
           reqqs: res.data
