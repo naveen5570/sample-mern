@@ -77,41 +77,20 @@ router.post('/login', async(req, res) => {
 
 
 
-router.post('/',  async(req, res) => {
-  var query = { email: req.body.email};
-  const user_data =  await User.find(query);
-  if(user_data.length==0)
-  {
-  // generate salt to hash password
-  const salt = await bcrypt.genSalt(10);
-  // now we set user password to hashed password
-  var password = await bcrypt.hash(req.body.password, salt);
-  new User({
-      name: req.body.name,
-      email: req.body.email,
-      password: password,
-      otp_verified:'0'
-      }).save(req.body)
-      .then( user => { 
-          jwt.sign({id:user.id}, config.get('jwtsecret'), {expiresIn:3600},
-          (err,token) =>{
-           if(err) throw err;
-           res.status(200).json({ 
-            token:token,
-            msg: 'User registered successfully' });
-          }
-          );
-          
-      }
-      )
-      .catch(err => res.status(400).json({ error: 'Unable to add this user' }));
-  }
-  else
-  {
-      res.status(202).json({msg: 'Sorry! This email already Registered'});
-  }
+router.post('/create', function(req,res){
 
-});
+    //console.log('tttt');
+    
+    new Service({
+          name: req.body.name,
+          description: req.body.description
+          
+      }).save(function(err,doc){
+      if(err)res.json(err);
+      else res.json({ msg: 'Service Created Successfully' });
+        
+        });
+      });
 
 // @route GET api/books/:id
 // @description Update book

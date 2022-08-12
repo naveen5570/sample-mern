@@ -115,8 +115,8 @@ class Adminhome extends Component {
             section_1_description:'',
             section_1_link:''
         });
-        //alert("Profile updated");
-        window.location.href = "/";
+        alert("Details updated");
+        window.location.href = "/admin/home";
       })
       .catch(err => {
         //alert(err.data.msg);
@@ -271,7 +271,7 @@ class Adminhome extends Component {
               <input className="form-control" type="text" name="section_1_link" placeholder="Type Registered Address" value={this.state.section_1_link} onChange={this.onChange} />
               </div>
             </div>
-            <input className="form-control button-nav" name="submit" value="Update Profile" type="submit"  />
+            <input className="form-control button-nav" name="submit" value="Update Details" type="submit"  />
             </div>
             
               

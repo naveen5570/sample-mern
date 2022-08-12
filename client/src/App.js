@@ -47,6 +47,7 @@ import AdminRequestList from './components/AdminRequestList';
 import Home from './components/pages/Home';
 import Adminhome from './components/Adminhome';
 import AdminLogout from './components/AdminLogout';
+import AddService from './components/AddService';
 
 
 const App = () => {
@@ -95,6 +96,7 @@ const App = () => {
           <Route exact path='/admin/request-list' element={<AdminRequestList/>} />
           <Route exact path='/admin/home' element={<Adminhome/>} />
           <Route exact path='/admin/logout' element={<AdminLogout/>} />
+          <Route exact path='/admin/add-service' element={<AddService/>} />
           
           </Routes>
       

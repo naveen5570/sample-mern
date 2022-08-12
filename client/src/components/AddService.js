@@ -55,7 +55,7 @@ class AddService extends Component {
     };
     //alert('clicked');
     axios
-      .post('/api/requests/place', data)
+      .post('/api/services/create', data)
       .then(res => {
         this.setState({
             name: '',
@@ -119,12 +119,13 @@ class AddService extends Component {
             
             <div className="row">
             <div className="col-md-12 form-group">
-                <label className="form-label">Service</label>
-                <input className="form-control" type="text" name="address_1" placeholder="Type Address 1" value={this.state.address_1} onChange={this.onChange} />
+                <label className="form-label">Service Name</label>
+                <input className="form-control" type="text" name="name" placeholder="Type here" value={this.state.name} onChange={this.onChange} />
               </div>
               <div className="form-group col-md-12">
                 <label className="form-label">Service Description</label>
-                <textarea className="form-control" name="repair_explanation" placeholder="Type here" value={this.state.repair_explanation} onChange={this.onChange}></textarea>
+                <textarea className="form-control" name="description" placeholder="Type here" value={this.state.description} onChange={this.onChange}></textarea>
+                <input className="form-control button-nav" name="submit" value="Create Request" type="submit" />
               </div>
               
             </div>
