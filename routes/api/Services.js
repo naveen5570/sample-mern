@@ -7,26 +7,22 @@ const config = require('config');
 const jwt = require('jsonwebtoken');
 // Load Book model
 //const Book = require('../../models/Book');
-const User = require('../../models/User');
+const Service = require('../../models/Service');
 const auth = require('../../middleware/auth');
 
 // @route GET api/books/test
 // @description tests books route
 // @access Public
-router.get('/user-test', auth,  (req, res) => 
 
-res.send('user route testing!')
-
-);
 
 // @route GET api/books
 // @description Get all books
 // @access Public
 router.get('/', (req, res) => {
-  console.log('ddd');
-  User.find()
-    .then(users => res.json(users))
-    .catch(err => res.status(404).json({ nousersfound: 'No Users found' }));
+  console.log('services selected');
+  Service.find()
+    .then(services => res.json(services))
+    .catch(err => res.status(404).json({ noservicesfound: 'No Services found' }));
 });
 
 // @route GET api/books/:id

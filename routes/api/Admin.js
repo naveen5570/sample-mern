@@ -8,6 +8,7 @@ const jwt = require('jsonwebtoken');
 // Load Book model
 //const Book = require('../../models/Book');
 const User = require('../../models/User');
+const Admin = require('../../models/Admin');
 const auth = require('../../middleware/auth');
 
 // @route GET api/books/test
@@ -22,8 +23,7 @@ res.send('user route testing!')
 // @route GET api/books
 // @description Get all books
 // @access Public
-router.get('/', (req, res) => {
-  console.log('ddd');
+router.get('/', auth, (req, res) => {
   User.find()
     .then(users => res.json(users))
     .catch(err => res.status(404).json({ nousersfound: 'No Users found' }));
@@ -41,7 +41,7 @@ router.get('/get-user/:id', (req, res) => {
 // @route GET api/users/login
 router.post('/login', async(req, res) => {
     var query = { email: req.body.email};
-    const user_data =  await User.find(query);
+    const user_data =  await Admin.find(query);
     if(user_data.length!=0)
     {
       bcrypt.compare(req.body.password, user_data[0].password, (err, data) => {
@@ -58,8 +58,8 @@ router.post('/login', async(req, res) => {
           (err,token) =>{
            if(err) throw err;
            res.status(200).json({ 
-            token:token,
-            name:user_data[0].name,
+            admin_token:token,
+            admin_name:user_data[0].name,
             msg: 'Login success' });
           }
           );

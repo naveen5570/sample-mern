@@ -8,6 +8,7 @@ import './App.css';
 
 import UserRegister from './components/UserRegister';
 import UserLogin from './components/UserLogin';
+import AdminLogin from './components/AdminLogin';
 import ForgotPassword from './components/ForgotPassword';
 import Dashboard from './components/Dashboard';
 import ProfessionalRegister from './components/ProfessionalRegister';
@@ -40,6 +41,13 @@ import HiredSuccessfully from './components/HiredSuccessfully';
 import ActiveRequests from './components/ActiveRequests';
 import ProfessionalActiveRequests from './components/ProfessionalActiveRequests';
 import UserViewProfessionalProfile from './components/UserViewProfessionalProfile';
+import AdminProfessionalList from './components/AdminProfessionalList';
+import AdminUserList from './components/AdminUserList';
+import AdminRequestList from './components/AdminRequestList';
+import Home from './components/pages/Home';
+import Adminhome from './components/Adminhome';
+import AdminLogout from './components/AdminLogout';
+
 
 const App = () => {
   return (
@@ -47,10 +55,11 @@ const App = () => {
     <div className="App">
       <Routes>
           
-          <Route path='/' element={<UserRegister/>} />
+          <Route path='/' element={<Home/>} />
           <Route path='/login' element={<UserLogin/>} />
+          <Route path='/admin' element={<AdminLogin/>} />
           <Route path='/forgot-password' element={<ForgotPassword/>} />
-          <Route path='/user-list' element={<Dashboard/>} />
+          
           <Route exact path='/register-as-professional' element={<ProfessionalRegister/>} />
           <Route exact path='/login-as-professional' element={<ProfessionalLogin/>} />
           <Route exact path='/professional-profile' element={<Professional/>} />
@@ -81,7 +90,11 @@ const App = () => {
           <Route exact path='/hired-successfully' element={<HiredSuccessfully/>} />
           <Route exact path='/user-active-requests' element={<ActiveRequests/>} />
           <Route exact path='/professional-active-requests' element={<ProfessionalActiveRequests/>} />
-          
+          <Route exact path='/admin/professionals-list' element={<AdminProfessionalList/>} />
+          <Route exact path='/admin/user-list' element={<AdminUserList/>} />
+          <Route exact path='/admin/request-list' element={<AdminRequestList/>} />
+          <Route exact path='/admin/home' element={<Adminhome/>} />
+          <Route exact path='/admin/logout' element={<AdminLogout/>} />
           
           </Routes>
       

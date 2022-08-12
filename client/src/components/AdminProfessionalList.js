@@ -3,10 +3,10 @@ import '../App.css';
 import axios from 'axios';
 import { Link, Redirect } from 'react-router-dom';
 import jwtDecode from 'jwt-decode';
-import ReqCard from './ReqCard';
-import Header from './Header';
+import ReqCard from './ProfessionalCard';
+import Header from './Headeradmin';
 
-class Dashboard extends Component {
+class AdminProfessionalList extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -24,7 +24,7 @@ class Dashboard extends Component {
     console.log(u.id);
     
     axios
-      .get('/api/requests/admin-request-list')
+      .get('/api/professionals')
       .then(res => {
         this.setState({
           reqqs: res.data
@@ -92,4 +92,4 @@ class Dashboard extends Component {
   }
 }
 
-export default Dashboard;
+export default AdminProfessionalList;

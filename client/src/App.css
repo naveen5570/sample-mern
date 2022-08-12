@@ -74,11 +74,20 @@
   margin-top:6px;
   background:#c5d9d8;
 }
+.card-container1 {
+  width: 80%;
+  margin: 0 auto;
+  overflow: hidden;
+  margin-top:6px;
+  background:#ddd;
+  
+}
 
 .desc {
   height: 130px;
   padding: 10px;
 }
+.card-container1 .desc {padding:0; height:auto;}
 
 .desc h2 {
   font-size: 1em;
@@ -238,3 +247,13 @@ h3.title { font-size:40px; line-height: 54px;}
   .profile_right {border-left:1px solid #ddd; padding-top:100px; padding-left:30px;}
 
   h4 img {margin-right:10px;}
+  .list_container table {width:100%;}
+  .list_container table th {text-align:left; color:#000; padding:8px 5px; border:1px solid #999;}
+  .list_container table td {color:#666; border:1px solid #999; padding:8px 5px;}
+  .page-title {color:#999; text-align:center}
+
+  .form-group.col-md-6, .form-group.col-md-4, .form-group.col-md-12, .form-group.col-md-3,.form-group.col-md-8 {padding:10px 15px;}
+
+  .form-control {background:#f3f3f3;}
+  .form-control.button-nav {background:#3aaf9f}
+

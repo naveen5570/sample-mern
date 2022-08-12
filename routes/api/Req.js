@@ -17,12 +17,22 @@ const auth = require('../../middleware/auth');
 const Req = mongoose.model("Request");
 const Appl = mongoose.model("Application");
 const Reqq = require('../../models/Request');
-router.get('/',function(req,res){
- res.send('test'); 
+router.get('/', (req, res) => {
+  //console.log('test');
+  Reqq.find()
+    .then(reqqs => res.json(reqqs))
+    .catch(err => res.status(404).json({ noreqqsfound: 'No reqqs found' }));
 });
 
 
 router.get('/request-list', (req, res) => {
+  //console.log('test');
+  Reqq.find({status:"1"})
+    .then(reqqs => res.json(reqqs))
+    .catch(err => res.status(404).json({ noreqqsfound: 'No reqqs found' }));
+});
+
+router.get('/admin-request-list', (req, res) => {
   //console.log('test');
   Reqq.find({status:"1"})
     .then(reqqs => res.json(reqqs))

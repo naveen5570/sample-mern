@@ -3,10 +3,10 @@ import '../App.css';
 import axios from 'axios';
 import { Link, Redirect } from 'react-router-dom';
 import jwtDecode from 'jwt-decode';
-import ReqCard from './ReqCard';
-import Header from './Header';
+import ReqCard from './AdminRequestListCard';
+import Header from './Headeradmin';
 
-class Dashboard extends Component {
+class AdminRequestList extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -24,7 +24,7 @@ class Dashboard extends Component {
     console.log(u.id);
     
     axios
-      .get('/api/requests/admin-request-list')
+      .get('/api/requests')
       .then(res => {
         this.setState({
           reqqs: res.data
@@ -79,7 +79,17 @@ class Dashboard extends Component {
           <br/><br/>
 
           <div className="list">
+          <h1 className="page-title">All Users</h1>
+          <div className="card-container1 col-md-12">
+          
+           <div className="desc list_container">
+            
+          <table>
+                    <tr><th>Specialisation</th><th>Address</th><th>Action</th></tr>
              {reqList}
+             </table>
+             </div>
+             </div>
           </div>
         </div>
       </div>
@@ -92,4 +102,4 @@ class Dashboard extends Component {
   }
 }
 
-export default Dashboard;
+export default AdminRequestList;

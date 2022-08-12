@@ -25,7 +25,9 @@ class Professional extends Component {
       specialisation:'',
       experience:'',
       qualification:'',
-      standard_fees:''
+      standard_fees:'',
+      availability_hours1: '',
+      availability_hours2: ''
     };
   }
 
@@ -68,6 +70,9 @@ class Professional extends Component {
       experience:this.state.experience,
       qualification:this.state.qualification,
       standard_fees:this.state.standard_fees,
+      availability_hours1:this.state.availability_hours1,
+      availability_hours2: this.state.availability_hours2,
+      
       user_id:u.id
       
     };
@@ -92,7 +97,9 @@ class Professional extends Component {
           qualification:'',
           fees:'',
           professional_card: '',
-          status: ''
+          status: '',
+          availability_hours1:'',
+          availability_hours2:''
         });
         //alert("Profile updated");
         window.location.href = "/profile-updated";
@@ -208,14 +215,24 @@ class Professional extends Component {
               </div>
             </div>
             <div className="row">
-              <div className="col-md-6 form-group">
+              <div className="col-md-4 form-group">
                 <label className="form-label">City<span>*</span></label>
                 <input className="form-control" type="text" name="city" placeholder="Type Here" value={this.state.city} onChange={this.onChange} />
               </div>
-              <div className="col-md-6 form-group">
+              <div className="col-md-4 form-group">
                 <label className="form-label">Postal Code<span>*</span></label>
                 <input className="form-control" type="text" name="zipcode" placeholder="Type Here" value={this.state.zipcode} onChange={this.onChange} />
               </div>
+              <div className="col-md-2 form-group">
+              
+                <label className="form-label">Available From</label>
+                <input className="form-control" type="time" name="availability_hours1" onChange={this.onChange} />
+                </div>
+                <div className="col-md-2 form-group">
+                <label className="form-label">To</label>
+                <input className="form-control" type="time" name="availability_hours2" onChange={this.onChange} />
+              </div>
+              
             </div>
             
           </div>
@@ -226,43 +243,43 @@ class Professional extends Component {
 
               <label className="form-label col-md-12">Choose your specialisation<span>*</span></label>
 
-              <div className="form-check col-md-3">
+              <div className="form-check col-md-4">
                 <div className='check-box'>
                   <input type="checkbox" name="specialisation" className="form-check-input" value="Plumbing Services" /><label className="form-check-label" >Plumbing Services</label>
                 </div>
               </div>
-              <div className="form-check col-md-3">
+              <div className="form-check col-md-4">
                 <div className='check-box'>
                   <input type="checkbox" name="specialisation" className="form-check-input" value="Carpenter Services" /><label className="form-check-label" >Carpenter Services</label>
                 </div>
               </div>
 
-              <div className="form-check col-md-3">
+              <div className="form-check col-md-4">
                 <div className='check-box'>
                   <input type="checkbox" name="specialisation" className="form-check-input" value="Pest Control Services" /><label className="form-check-label" >Pest Control Services</label>
                 </div>
               </div>
-              <div className="form-check col-md-3">
+              <div className="form-check col-md-4">
                 <div className='check-box'>
                   <input type="checkbox" name="specialisation" className="form-check-input" value="Roofing Services" /><label className="form-check-label" >Roofing Services</label>
                 </div>
               </div>
-              <div className="form-check col-md-3">
+              <div className="form-check col-md-4">
                 <div className='check-box'>
                   <input type="checkbox" name="specialisation" className="form-check-input" value="Ac Repair Services" /><label className="form-check-label" >Ac Repair Services</label>
                 </div>
               </div>
-              <div className="form-check col-md-3">
+              <div className="form-check col-md-4">
                 <div className='check-box'>
                   <input type="checkbox" name="specialisation" className="form-check-input" value="Electrician Services"/><label className="form-check-label" >Electrician Services</label>
                 </div>
               </div>
-              <div className="form-check col-md-3">
+              <div className="form-check col-md-4">
                 <div className='check-box'>
                   <input type="checkbox" name="specialisation" className="form-check-input" value="Cleaning and Disinfection Services"/><label className="form-check-label" >Cleaning & Disinfection</label>
                 </div>
               </div>
-              <div className="form-check col-md-3">
+              <div className="form-check col-md-4">
                 <div className='check-box'>
                   <input type="checkbox" name="specialisation" className="form-check-input" value="Electrical Appliance Repair" /><label className="form-check-label" >Electrical Appliance Repair</label>
                 </div>

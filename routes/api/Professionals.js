@@ -147,7 +147,7 @@ router.post('/',  async(req, res) => {
 
 router.post('/profile',   async(req, res) => {
   var query = { _id: req.body.user_id};
-  var newvalues = {$set: {displayName:req.body.name,description:req.body.description,photo_id:req.body.photo_id,registered_address:req.body.registered_address,office_address:req.body.office_address,country:req.body.country,state_or_province:req.body.state_or_province,radius_to_cater:req.body.radius_to_cater,zipcode:req.body.zipcode,city:req.body.city,specialisation:req.body.specialisation,experience:req.body.experience,qualification:req.body.qualification,standard_fees:req.body.standard_fees,professional_card:req.body.professional_card}};
+  var newvalues = {$set: {displayName:req.body.name,description:req.body.description,photo_id:req.body.photo_id,registered_address:req.body.registered_address,office_address:req.body.office_address,country:req.body.country,state_or_province:req.body.state_or_province,radius_to_cater:req.body.radius_to_cater,zipcode:req.body.zipcode,city:req.body.city,specialisation:req.body.specialisation,experience:req.body.experience,qualification:req.body.qualification,standard_fees:req.body.standard_fees,professional_card:req.body.professional_card,availability_hours1:req.body.availability_hours1,availability_hours2:req.body.availability_hours2}};
     
   Professional.updateOne(query, newvalues, function(err, res) {
     if (err) throw err;

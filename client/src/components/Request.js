@@ -9,19 +9,23 @@ class Request extends Component {
     super();
     
     this.state = {
-      specialisation:'',
+      specialisation:'Plumber',
       repair_explanation:'',
       repair_immediately:'',
       address_1: '',
       address_2: '',
-      country: '',
-      state_or_province: '',
+      country: 'Canada',
+      state_or_province: 'Alberta',
       city:'',
       zipcode:'',
       status: '',
       user_id:''
     };
+    
   }
+
+  
+  
 
   componentDidMount() {
     const token = localStorage.getItem("token");
@@ -35,11 +39,14 @@ class Request extends Component {
       
   };
 
+  
+
   onChange = e => {
+    //alert('tt');
     this.setState({ [e.target.name]: e.target.value });
-    if (e.target.selected) {
-      this.setState({ specialisation: e.target.value });
-    }
+    
+      
+    
   };
 
   onSubmit = e => {
@@ -47,7 +54,7 @@ class Request extends Component {
     const token = localStorage.getItem("token");
     const u = jwtDecode(token);
     e.preventDefault();
-
+alert(this.state.state_or_province);
     const data = {
           specialisation: this.state.specialisation,
           repair_explanation: this.state.repair_explanation,
@@ -150,43 +157,43 @@ class Request extends Component {
 
               <div className="form-check col-md-12 form-check-radio">
                 <div className='check-box'>
-                  <input type="radio" name="specialisation" className="form-check-input" value="Plumbing Services" /><label className="form-check-label" >Plumbing Services</label>
+                  <input type="radio" onChange={this.onChange} defaultChecked={this.state.name === "Plumber"} name="specialisation" className="form-check-input" value="Plumber" /><label className="form-check-label" >Plumbing Services</label>
                 </div>
               </div>
               <div className="form-check col-md-12 form-check-radio">
                 <div className='check-box'>
-                  <input type="radio" name="specialisation" className="form-check-input" value="Carpenter Services" /><label className="form-check-label" >Carpenter Services</label>
+                  <input type="radio" onChange={this.onChange} defaultChecked={this.state.name === "Carpenter"}  name="specialisation" className="form-check-input" value="Carpenter" /><label className="form-check-label" >Carpenter Services</label>
                 </div>
               </div>
 
               <div className="form-check col-md-12 form-check-radio">
                 <div className='check-box'>
-                  <input type="radio" name="specialisation" className="form-check-input" value="Pest Control Services" /><label className="form-check-label" >Pest Control Services</label>
+                  <input type="radio" onChange={this.onChange} defaultChecked={this.state.name === "Pest Control"}  name="specialisation" className="form-check-input" value="Pest Control" /><label className="form-check-label" >Pest Control Services</label>
                 </div>
               </div>
               <div className="form-check col-md-12 form-check-radio">
                 <div className='check-box'>
-                  <input type="radio" name="specialisation" className="form-check-input" value="Roofing Services" /><label className="form-check-label" >Roofing Services</label>
+                  <input type="radio" onChange={this.onChange} defaultChecked={this.state.name === "Roofing"}  name="specialisation" className="form-check-input" value="Roofing" /><label className="form-check-label" >Roofing Services</label>
                 </div>
               </div>
               <div className="form-check col-md-12 form-check-radio">
                 <div className='check-box'>
-                  <input type="radio" name="specialisation" className="form-check-input" value="AC Repair and Services" /><label className="form-check-label" >AC Repair and Services</label>
+                  <input type="radio" onChange={this.onChange} name="specialisation" defaultChecked={this.state.name === "AC Repair"}  className="form-check-input" value="AC Repair" /><label className="form-check-label" >AC Repair and Services</label>
                 </div>
               </div>
               <div className="form-check col-md-12 form-check-radio">
                 <div className='check-box'>
-                  <input type="radio" name="specialisation" className="form-check-input" value="Electrician Services" /><label className="form-check-label" >Electrician Services</label>
+                  <input type="radio" onChange={this.onChange} defaultChecked={this.state.name === "Electrician"}  name="specialisation" className="form-check-input" value="Electrician" /><label className="form-check-label" >Electrician Services</label>
                 </div>
               </div>
               <div className="form-check col-md-12 form-check-radio">
                 <div className='check-box'>
-                  <input type="radio" name="specialisation" className="form-check-input" value="Cleaning and Disinfection Services" /><label className="form-check-label" >Cleaning and Disinfection Services</label>
+                  <input type="radio" onChange={this.onChange} defaultChecked={this.state.name === "Cleaning and Disinfection"}  name="specialisation" className="form-check-input" value="Cleaning and Disinfection" /><label className="form-check-label" >Cleaning and Disinfection Services</label>
                 </div>
               </div>
               <div className="form-check col-md-12 form-check-radio">
                 <div className='check-box'>
-                  <input type="radio" name="specialisation" className="form-check-input" value="Electrical Appliance Repair" /><label className="form-check-label" >Electrical Appliance Repair</label>
+                  <input type="radio" onChange={this.onChange} defaultChecked={this.state.name === "Pest Control"}  name="specialisation" className="form-check-input" value="Electrical Appliance Repair" /><label className="form-check-label" >Electrical Appliance Repair</label>
                 </div>
               </div>
 
@@ -206,10 +213,10 @@ class Request extends Component {
 
               <div className="form-check col-md-12 form-check-radio">
                 <div className='check-box'>
-                  <input type="radio" name="repair_immediately" className="form-check-input" /><label className="form-check-label" >Yes</label>
+                  <input type="radio" name="repair_immediately" onChange={this.onChange} defaultChecked={this.state.name === "Yes"} className="form-check-input" value="Yes"/><label className="form-check-label" >Yes</label>
                 </div>
                 <div className='check-box'>
-                  <input type="radio" name="repair_immediately" className="form-check-input" /><label className="form-check-label" >No</label>
+                  <input type="radio" name="repair_immediately" className="form-check-input" onChange={this.onChange} defaultChecked={this.state.name === "No"} value="No" /><label className="form-check-label" >No</label>
                 </div>
               </div>
               </div>
@@ -240,19 +247,19 @@ class Request extends Component {
               <div className="col-md-6 form-group">
                 <label className="form-label">Province<span>*</span></label>
                 <select className="form-control" name="state_or_province" value={this.state.state_or_province} onChange={this.onChange} >
-                <option value="Alberta">Alberta</option>
-	<option value="British Columbia">British Columbia</option>
-	<option value="Manitoba">Manitoba</option>
-	<option value="New Brunswick">New Brunswick</option>
-	<option value="Newfoundland and Labrador">Newfoundland and Labrador</option>
-	<option value="Northwest Territories">Northwest Territories</option>
-	<option value="Nova Scotia">Nova Scotia</option>
-	<option value="Nunavut">Nunavut</option>
-	<option value="Ontario">Ontario</option>
-	<option value="Prince Edward Island">Prince Edward Island</option>
-	<option value="Quebec">Quebec</option>
-	<option value="Saskatchewan">Saskatchewan</option>
-	<option value="Yukon">Yukon</option>
+                <option value="Alberta" onChange={this.onChange} defaultSelected={this.state.name === "Alberta"}>Alberta</option>
+	<option value="British Columbia" onChange={this.onChange} defaultSelected={this.state.name === "British Columbia"}>British Columbia</option>
+	<option value="Manitoba" onChange={this.onChange} defaultSelected={this.state.name === "Manitoba"}>Manitoba</option>
+	<option value="New Brunswick" onChange={this.onChange} defaultSelected={this.state.name === "New Brunswick"}>New Brunswick</option>
+	<option value="Newfoundland and Labrador" onChange={this.onChange} defaultSelected={this.state.name === "Newfoundland and Labrador"}>Newfoundland and Labrador</option>
+	<option value="Northwest Territories" onChange={this.onChange} defaultSelected={this.state.name === "Northwest Territories"}>Northwest Territories</option>
+	<option value="Nova Scotia" onChange={this.onChange} defaultSelected={this.state.name === "Nova Scotia"}>Nova Scotia</option>
+	<option value="Nunavut" onChange={this.onChange} defaultSelected={this.state.name === "Nunavut"}>Nunavut</option>
+	<option value="Ontario" onChange={this.onChange} defaultSelected={this.state.name === "Ontario"}>Ontario</option>
+	<option value="Prince Edward Island" onChange={this.onChange} defaultSelected={this.state.name === "Prince Edward Island"}>Prince Edward Island</option>
+	<option value="Quebec" onChange={this.onChange} defaultSelected={this.state.name === "Quebec"}>Quebec</option>
+	<option value="Saskatchewan" onChange={this.onChange} defaultSelected={this.state.name === "Saskatchewan"}>Saskatchewan</option>
+	<option value="Yukon" onChange={this.onChange} defaultSelected={this.state.name === "Yukon"}>Yukon</option>
                 </select>
               </div>
             </div>
@@ -266,7 +273,7 @@ class Request extends Component {
                 <input className="form-control" type="text" name="zipcode" placeholder="Type Here" value={this.state.zipcode} onChange={this.onChange} />
               </div>
             </div>
-            <input type="hidden" name="user_id" value=''/>
+            <input type="hidden" name="user_id" value=''/><br/>
             <input className="form-control button-nav" name="submit" value="Create Request" type="submit" />
           </div>
           

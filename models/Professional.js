@@ -45,6 +45,12 @@ const ProfessionalSchema = new mongoose.Schema({
   professional_card: {
     type: String
   },
+  availability_hours1: {
+    type: String
+  },
+  availability_hours2: {
+    type: String
+  },
   status: {
     type: String
   },
