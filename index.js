@@ -39,11 +39,11 @@ app.use('/api/stripe', striperoutes);
 app.use('/api/pages', pages);
 app.use('/api/services', services);
 
-/*
+
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname + '/client/build/index.html'));
 });
-*/
+
 
 
 const port = process.env.PORT || 5000;
