@@ -37,7 +37,7 @@ axios
   .post('/api/professionals/disapprove-professional',data)
   .then(res => {
     alert(res.data.msg);
-      window.location.href = "/";
+      //window.location.href = "/";
   })
   .catch(err =>{
     alert(err.message);
