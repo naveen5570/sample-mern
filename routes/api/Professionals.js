@@ -78,6 +78,8 @@ router.post('/login', async(req, res) => {
             token:token,
             name:professional_data[0].displayName,
             city:professional_data[0].city,
+            status:professional_data[0].status,
+            d_reason:professional_data[0].disapproval_reason,
             msg: 'Login success' });
 
           }
@@ -113,7 +115,7 @@ router.post('/',  async(req, res) => {
       name: req.body.name,
       email: req.body.email,
       password: password,
-      status:'1'
+      status:'0'
       }).save(req.body)
       .then( professional => { 
           jwt.sign({id:professional.id}, config.get('jwtsecret'), {expiresIn:3600},
@@ -179,8 +181,42 @@ router.put('/:id', (req, res) => {
 // @access Public
 router.delete('/:id', (req, res) => {
   Professional.findByIdAndRemove(req.params.id, req.body)
-    .then(professional => res.json({ mgs: 'Professional entry deleted successfully' }))
+    .then(professional => res.json({ msg: 'Professional entry deleted successfully' }))
     .catch(err => res.status(404).json({ error: 'No such a professional' }));
 });
+
+
+
+
+router.get('/approve-professional/:id', (req, res) => {
+  console.log('Approve=>'+req.params.id);
+  var query = { _id: req.params.id};
+  var newvalues = {$set: {status:'1', disapproval_reason:''}};
+    
+  Professional.updateOne(query, newvalues, function(err, res1) {
+    if (err) throw err;
+    console.log("1 document updated");
+    res.json({ msg: 'Professional Approved successfully' });
+    
+});
+});
+
+
+
+
+
+router.post('/disapprove-professional', function(req,res){
+  console.log('hitting=>'+req.body.reason);
+  var myquery = { _id: req.body.id }; 
+  var newvalues = {$set: {status:'2', disapproval_reason:req.body.reason}};
+  Professional.updateOne(myquery, newvalues, function(err1, res1){
+  if(err1) throw err1;
+  else res.json({ msg: 'Professional Disapproved Successfully' });
+  
+  });
+
+
+});
+
 
 module.exports = router;

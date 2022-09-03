@@ -8,6 +8,9 @@ const ServiceSchema = new mongoose.Schema({
   },
   description: {
     type: String
+  },
+  icon:{
+    type:String, default:"img.png"
   }
 },{ timestamps: true });
 

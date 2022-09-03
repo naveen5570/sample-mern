@@ -6,7 +6,9 @@ const app = express();
 
 const routeTasks = require('./src/routes/tasks');
 
-
+app.get('/this-test',function(req, res, ){
+ console.log('test'); 
+})
 
 // Stripe routes
 const striperoutes = require('./routes/stripe-route');
@@ -37,9 +39,12 @@ app.use('/api/stripe', striperoutes);
 app.use('/api/pages', pages);
 app.use('/api/services', services);
 
+/*
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname + '/client/build/index.html'));
 });
+*/
+
 
 const port = process.env.PORT || 5000;
 app.listen(port);

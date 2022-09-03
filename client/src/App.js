@@ -48,7 +48,13 @@ import Home from './components/pages/Home';
 import Adminhome from './components/Adminhome';
 import AdminLogout from './components/AdminLogout';
 import AddService from './components/AddService';
-
+import ServiceList from './components/ServiceList';
+import DeleteService from './components/DeleteService';
+import EditService from './components/EditService';
+import ApproveProfessional from './components/ApproveProfessional';
+import DisapproveProfessional from './components/DisapproveProfessional';
+import DisapprovedProfessional from './components/DisapprovedProfessional';
+import WaitingForApproval from './components/WaitingForApproval';
 
 const App = () => {
   return (
@@ -57,6 +63,7 @@ const App = () => {
       <Routes>
           
           <Route path='/' element={<Home/>} />
+          <Route path='/register' element= {<UserRegister/>} />
           <Route path='/login' element={<UserLogin/>} />
           <Route path='/admin' element={<AdminLogin/>} />
           <Route path='/forgot-password' element={<ForgotPassword/>} />
@@ -97,6 +104,15 @@ const App = () => {
           <Route exact path='/admin/home' element={<Adminhome/>} />
           <Route exact path='/admin/logout' element={<AdminLogout/>} />
           <Route exact path='/admin/add-service' element={<AddService/>} />
+          <Route exact path='/admin/service-list' element={<ServiceList/>} />
+          <Route exact path='/admin/delete-service/:id' element={<DeleteService/>} />
+          <Route exact path='/admin/edit-service/:id' element={<EditService/>} />
+          <Route exact path='/admin/approve-professional/:id' element={<ApproveProfessional/>} />
+          <Route exact path='/admin/disapprove-professional/:id' element={<DisapproveProfessional/>} />
+          <Route exact path='/disapproved-professional' element={<DisapprovedProfessional/>} />
+          <Route exact path='/waiting-for-approval' element={<WaitingForApproval/>} />
+
+          
           
           </Routes>
       

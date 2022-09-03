@@ -51,6 +51,8 @@ class UserLogin extends Component {
         //setLoginUser(res.data.user);
         localStorage.setItem('professional-token', res.data.token);
         localStorage.setItem('name', res.data.name);
+        localStorage.setItem('p_status',res.data.status);
+        localStorage.setItem('d_reason',res.data.d_reason);
         
         if(res.status==200)
         {

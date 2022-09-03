@@ -16,9 +16,18 @@ class AppliedRequest extends Component {
 
   componentDidMount() {
     const token = localStorage.getItem("professional-token");
+    const p_status = localStorage.getItem("p_status");
     if(!token)
     {
       window.location.href = "/login-as-professional";
+    }
+    if(p_status==2)
+    {
+    window.location.href="/disapproved-professional";
+    }
+    else if(p_status==0)
+    {
+    window.location.href='/waiting-for-approval'; 
     }
     const u = jwtDecode(token);
     console.log(u.id);

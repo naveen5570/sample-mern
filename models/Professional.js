@@ -52,9 +52,11 @@ const ProfessionalSchema = new mongoose.Schema({
     type: String
   },
   status: {
-    type: String
+    type: String, default:0
   },
-  
+disapproval_reason:{
+  type: String, default:''
+},  
 },{ timestamps: true });
 
 module.exports = Professional = mongoose.model('professional', ProfessionalSchema);

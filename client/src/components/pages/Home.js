@@ -9,7 +9,8 @@ class Home extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      homes: []
+      homes: [],
+      services:[]
     };
   }
 
@@ -23,17 +24,31 @@ class Home extends Component {
         this.setState({
           homes: res.data
         })
-        
+      
+         
       })
       .catch(err => {
         console.log("Error from viewAppDetails");
       })
+
+      axios
+        .get('/api/services')
+        .then(res => {
+          console.log("Print-services-API-response: " + JSON.stringify(res.data));
+          this.setState({
+            services: res.data
+          })
+        })
+        .catch(err => {
+          console.log("Error from viewAppDetails");
+        })
   };
   
 
   render() {
     
 const homes = this.state.homes;
+const services = this.state.services;
 console.log('this=>'+homes);
     return (
       <>
@@ -52,13 +67,13 @@ console.log('this=>'+homes);
       </ul>
       <ul className="nav navbar-nav navbar-right">
             <li className="nav-item">
-          <a className="nav-link" aria-current="page" href="#">Register As A Professional</a>
+          <Link className="nav-link" aria-current="page" to="/register-as-professional">Register As A Professional</Link>
         </li>
         <li className="nav-item">
-          <a className="nav-link" href="#">Sign In</a>
+          <Link className="nav-link" to="/login">Sign In</Link>
         </li>
 		  <li className="nav-item">
-          <a className="nav-link btn btn-info" aria-current="page" href="#">Sign Up</a>
+          <Link className="nav-link btn btn-info" aria-current="page" to="/register">Sign Up</Link>
         </li>
         
           </ul>
@@ -153,62 +168,19 @@ console.log('this=>'+homes);
 <h2>{homes.services_heading}</h2>
 <h5>{homes.services_description}</h5>
 <div className="row">
-<div className="col-md-3">
-<div className="service">
-<img src="img/image1.png"/>
-<h6>Plumbing Services</h6>
-<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-</div>
-</div>
-<div className="col-md-3">
-<div className="service">
-<img src="img/image2.png"/>
-<h6>Carpenter Services</h6>
-<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-</div>
-</div>
-<div className="col-md-3">
-<div className="service">
-<img src="img/image3.png"/>
-<h6>Pest Control Services</h6>
-<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-</div>
-</div>
-<div className="col-md-3">
-<div className="service">
-<img src="img/image4.png"/>
-<h6>AC Repair and Services</h6>
-<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-</div>
-</div>
-<div className="col-md-3">
-<div className="service">
-<img src="img/image5.png"/>
-<h6>Plumbing Services</h6>
-<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-</div>
-</div>
-<div className="col-md-3">
-<div className="service">
-<img src="img/image6.png"/>
-<h6>Carpenter Services</h6>
-<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-</div>
-</div>
-<div className="col-md-3">
-<div className="service">
-<img src="img/image7.png"/>
-<h6>Pest Control Services</h6>
-<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-</div>
-</div>
-<div className="col-md-3">
-<div className="service">
-<img src="img/image8.png"/>
-<h6>AC Repair and Services</h6>
-<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-</div>
-</div>
+{services.map(service => {
+          return <div className="col-md-3">
+          <div className="service">
+            <img src={`img/${service.icon}`}/>
+            <h6>{service.name}</h6>
+            <p>{service.description}</p>
+            </div></div>
+        })}
+
+
+
+
+
 </div>
 </div>
 </div>

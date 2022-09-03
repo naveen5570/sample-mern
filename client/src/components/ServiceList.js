@@ -3,10 +3,9 @@ import '../App.css';
 import axios from 'axios';
 import { Link, Redirect } from 'react-router-dom';
 import jwtDecode from 'jwt-decode';
-import ReqCard from './ReqCard';
-import Header from './Header';
+import Header from './Headeradmin';
 
-class RequestList extends Component {
+class ServiceList extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -15,49 +14,32 @@ class RequestList extends Component {
   }
 
   componentDidMount() {
-    const token = localStorage.getItem("professional-token");
-    const p_status = localStorage.getItem("p_status");
+    const token = localStorage.getItem("admin_token");
     if(!token)
     {
-      window.location.href = "/login-as-professional";
-    }
-    if(p_status==2)
-    {
-    window.location.href="/disapproved-professional";
-    }
-    else if(p_status==0)
-    {
-    window.location.href='/waiting-for-approval'; 
+      window.location.href = "/admin/login";
     }
     const u = jwtDecode(token);
     console.log(u.id);
     
     axios
-      .get('/api/requests/request-list')
+      .get('/api/services')
       .then(res => {
         this.setState({
           reqqs: res.data
          });
       })
       .catch(err =>{
-        console.log('Error from ShowBookList');
+        console.log('Error from ServiceList');
       })
+      
       
   };
   
 
   render() {
     const reqqs = this.state.reqqs;
-    //console.log("PrintBook: " + JSON.stringify(reqqs));
-    let reqList;
-
-    if(!reqqs) {
-      reqList = "there is no book record!";
-    } else {
-      reqList = reqqs.map((reqq, k) =>
-      <ReqCard reqq={reqq} key={k} />
-      );
-    }
+    
 
     return (
       <div>
@@ -85,11 +67,24 @@ class RequestList extends Component {
       
       <div className="ShowBookList">
         <div className="container">
-          <br/><br/>
+        <br/><br/>
 
-          <div className="list">
-             {reqList}
-          </div>
+<div className="list">
+<h1 className="page-title">Services List</h1>
+<div className="card-container1 col-md-12">
+
+ <div className="desc list_container">
+  
+<table id="datatable">
+          <tr><th>Name</th><th>Description</th><th>Added On</th><th>Action</th></tr>
+   {reqqs.map(reqq => {
+          return <tr><td>{reqq.name}</td><td>{reqq.description}</td><td>{reqq.createdAt}</td><td><Link to={`/admin/edit-service/${reqq._id}`}>Edit</Link>/<Link to={`/admin/delete-service/${reqq._id}`}>Delete</Link></td></tr>
+            
+        })}
+   </table>
+   </div>
+   </div>
+</div>
         </div>
       </div>
       </div>
@@ -101,4 +96,4 @@ class RequestList extends Component {
   }
 }
 
-export default RequestList;
+export default ServiceList;

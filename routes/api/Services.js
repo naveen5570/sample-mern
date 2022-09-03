@@ -28,10 +28,10 @@ router.get('/', (req, res) => {
 // @route GET api/books/:id
 // @description Get single book by id
 // @access Public
-router.get('/get-user/:id', (req, res) => {
-  User.findById(req.params.id)
-    .then(user => res.json(user))
-    .catch(err => res.status(404).json({ nouserfound: 'No User found' }));
+router.get('/get-service/:id', (req, res) => {
+  Service.findById(req.params.id)
+    .then(service => res.json(service))
+    .catch(err => res.status(404).json({ noservicesfound: 'No User found' }));
 });
 
 // @route GET api/users/login
@@ -106,10 +106,23 @@ router.put('/:id', (req, res) => {
 // @route GET api/books/:id
 // @description Delete book by id
 // @access Public
-router.delete('/:id', (req, res) => {
-  User.findByIdAndRemove(req.params.id, req.body)
-    .then(user => res.json({ mgs: 'User entry deleted successfully' }))
-    .catch(err => res.status(404).json({ error: 'No such a user' }));
+router.delete('/delete-service/:id', (req, res) => {
+  Service.findByIdAndRemove(req.params.id, req.body)
+    .then(data => res.json({ msg: 'Service deleted successfully' }))
+    .catch(err => res.status(404).json({ message: 'No such a Service' }));
+});
+
+
+
+router.post('/update-service', (req, res) => {
+  console.log('update');
+  var myquery = { _id: req.body.id }; 
+var newvalues = { $set: {name:req.body.name, description:req.body.description} }; 
+Service.updateOne(myquery, newvalues, function(err1, res1){
+if(err1) throw err1;
+else res.json({ msg: 'Service details updated' });
+
+});
 });
 
 module.exports = router;

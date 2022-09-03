@@ -36,6 +36,10 @@ class AdminProfessionalList extends Component {
       
   };
   
+  onSubmit = e => {
+    alert('test');
+    }
+
 
   render() {
     const reqqs = this.state.reqqs;
