@@ -8,7 +8,6 @@ class DisapproveProfessional extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      
       reason:'',
       id:''
     };
@@ -25,6 +24,7 @@ class DisapproveProfessional extends Component {
       
   };
 onSubmit = e => {
+  e.preventDefault();
   const params = this.props.params;
   //alert(this.state.reason);
   const data = {
@@ -36,8 +36,12 @@ onSubmit = e => {
 axios
   .post('/api/professionals/disapprove-professional',data)
   .then(res => {
+    this.setState({
+      id:'',
+      reason:''
+    });
     alert(res.data.msg);
-      //window.location.href = "/";
+      window.location.href = "/admin/professionals-list";
   })
   .catch(err =>{
     alert(err.message);
