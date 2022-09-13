@@ -49,12 +49,15 @@ class Request extends Component {
     
   };
 
+  
+
+
   onSubmit = e => {
     //alert('clicked');
     const token = localStorage.getItem("token");
     const u = jwtDecode(token);
     e.preventDefault();
-alert(this.state.state_or_province);
+//alert(this.state.state_or_province);
     const data = {
           specialisation: this.state.specialisation,
           repair_explanation: this.state.repair_explanation,

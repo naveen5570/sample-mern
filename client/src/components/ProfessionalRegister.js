@@ -22,7 +22,7 @@ class ProfessionalRegister extends Component {
     const token = localStorage.getItem("professional-token");
     if(token)
     {
-      window.location.href = "/request-list";
+      window.location.href = "/update-professional-profile";
     }
     const u = jwtDecode(token);
     console.log(u.id);

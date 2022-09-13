@@ -55,9 +55,11 @@ import ApproveProfessional from './components/ApproveProfessional';
 import DisapproveProfessional from './components/DisapproveProfessional';
 import DisapprovedProfessional from './components/DisapprovedProfessional';
 import WaitingForApproval from './components/WaitingForApproval';
+import UpdateProfessionalProfile from './components/UpdateProfessionalProfile';
 
 const App = () => {
   return (
+    
     <Router>
     <div className="App">
       <Routes>
@@ -111,6 +113,8 @@ const App = () => {
           <Route exact path='/admin/disapprove-professional/:id' element={<DisapproveProfessional/>} />
           <Route exact path='/disapproved-professional' element={<DisapprovedProfessional/>} />
           <Route exact path='/waiting-for-approval' element={<WaitingForApproval/>} />
+          <Route exact path='/update-professional-profile' element={<UpdateProfessionalProfile/>} />
+          
 
           
           

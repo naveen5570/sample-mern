@@ -10,27 +10,38 @@ class RequestList extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      reqqs: []
+      reqqs: [],
+      prof:[]
     };
   }
 
   componentDidMount() {
     const token = localStorage.getItem("professional-token");
-    const p_status = localStorage.getItem("p_status");
+    axios.get('/api/professionals/get-professional/'+token).then(res => {
+      this.setState({
+        prof: res.data
+       });
+       //console.log('status=>'+res.data.status);
+       if(res.data.status==2)
+    {
+    window.location.href="/disapproved-professional";
+    }
+    else if(res.data.status==0)
+    {
+    window.location.href='/waiting-for-approval'; 
+    }
+    })
+    .catch(err =>{
+      console.log('Error from professional');
+    })
+    
+
+    
     if(!token)
     {
       window.location.href = "/login-as-professional";
     }
-    if(p_status==2)
-    {
-    window.location.href="/disapproved-professional";
-    }
-    else if(p_status==0)
-    {
-    window.location.href='/waiting-for-approval'; 
-    }
-    const u = jwtDecode(token);
-    console.log(u.id);
+    
     
     axios
       .get('/api/requests/request-list')

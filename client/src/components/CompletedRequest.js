@@ -16,6 +16,23 @@ class CompletedRequest extends Component {
 
   componentDidMount() {
     const token = localStorage.getItem("professional-token");
+    axios.get('/api/professionals/get-professional/'+token).then(res => {
+      this.setState({
+        prof: res.data
+       });
+       //console.log('status=>'+res.data.status);
+       if(res.data.status==2)
+    {
+    window.location.href="/disapproved-professional";
+    }
+    else if(res.data.status==0)
+    {
+    window.location.href='/waiting-for-approval'; 
+    }
+    })
+    .catch(err =>{
+      console.log('Error from professional');
+    })
     const p_status = localStorage.getItem("p_status");
     if(!token)
     {
