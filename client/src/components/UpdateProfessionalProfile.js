@@ -29,8 +29,12 @@ class UpdateProfessionalProfile extends Component {
       qualification:'',
       standard_fees:'',
       availability_hours1: '',
-      availability_hours2: ''
-    };
+      availability_hours2: '',
+      specialisations:[]
+        
+    }
+    this.handleCheckbox = this.handleCheckbox.bind(this);
+    
   }
 
   
@@ -83,7 +87,17 @@ class UpdateProfessionalProfile extends Component {
   };
   handleCheckbox = e => {
     const value = e.target.value;
-    const checked = this.state.checked;
+    const checked = e.target.checked;
+    if(checked==true)
+    {
+      this.state.specialisations[value]=value
+    }
+    else
+    {
+      console.log('unchecked');
+      this.state.specialisations.splice(value, 1);
+    }
+    //console.log(this.state.specialisations);
   };
 
   onSubmit = e => {
@@ -91,7 +105,7 @@ class UpdateProfessionalProfile extends Component {
     const u = jwtDecode(token);
     
     e.preventDefault();
-    
+    console.log(this.state.specialisations);
     const data = {
       photo_id: this.state.photo_id,
       registered_address: this.state.registered_address,
@@ -106,7 +120,7 @@ class UpdateProfessionalProfile extends Component {
       description:this.state.description,
       city:this.state.city,
       zipcode:this.state.zipcode,
-      specialisation:this.state.specialisation,
+      specialisation:this.state.specialisations,
       experience:this.state.experience,
       qualification:this.state.qualification,
       standard_fees:this.state.standard_fees,
@@ -142,7 +156,7 @@ class UpdateProfessionalProfile extends Component {
           availability_hours2:''
         });
         //alert("Profile updated");
-        window.location.href = "/profile-updated";
+        //window.location.href = "/profile-updated";
       })
       .catch(err => {
         //alert(err.data.msg);

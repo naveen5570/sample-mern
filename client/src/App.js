@@ -45,7 +45,9 @@ import AdminProfessionalList from './components/AdminProfessionalList';
 import AdminUserList from './components/AdminUserList';
 import AdminRequestList from './components/AdminRequestList';
 import Home from './components/pages/Home';
+import Phome from './components/pages/Phome';
 import Adminhome from './components/Adminhome';
+import Adminphome from './components/Adminphome';
 import AdminLogout from './components/AdminLogout';
 import AddService from './components/AddService';
 import ServiceList from './components/ServiceList';
@@ -65,6 +67,7 @@ const App = () => {
       <Routes>
           
           <Route path='/' element={<Home/>} />
+          <Route path='/professional' element={<Phome/>} />
           <Route path='/register' element= {<UserRegister/>} />
           <Route path='/login' element={<UserLogin/>} />
           <Route path='/admin' element={<AdminLogin/>} />
@@ -104,6 +107,7 @@ const App = () => {
           <Route exact path='/admin/user-list' element={<AdminUserList/>} />
           <Route exact path='/admin/request-list' element={<AdminRequestList/>} />
           <Route exact path='/admin/home' element={<Adminhome/>} />
+          <Route exact path='/admin/phome' element={<Adminphome/>} />
           <Route exact path='/admin/logout' element={<AdminLogout/>} />
           <Route exact path='/admin/add-service' element={<AddService/>} />
           <Route exact path='/admin/service-list' element={<ServiceList/>} />

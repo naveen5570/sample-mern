@@ -95,28 +95,8 @@ class Adminhome extends Component {
     axios
       .post('/api/pages/update-detail', data)
       .then(res => {
-        this.setState({
-            banner_h1: '',
-            banner_h2: '',
-            banner_h3: '',
-            banner_link: '',
-            
-            how_heading: '',
-            how_description: '',
-            how_1_heading: '',
-            how_1_description:'',
-            how_2_heading: '',
-            how_2_description:'',
-            how_3_heading: '',
-            how_3_description:'',
-            services_heading:'',
-            services_description:'',
-            section_1_heading:'',
-            section_1_description:'',
-            section_1_link:''
-        });
         alert("Details updated");
-        window.location.href = "/admin/home";
+        //window.location.href = "/admin/home";
       })
       .catch(err => {
         //alert(err.data.msg);
@@ -176,7 +156,7 @@ class Adminhome extends Component {
               </div>
               <div className="form-group col-md-6">
               <label className="form-label">Banner Area Second Heading</label>
-                <input className="form-control" type="text" name="banner_h3" placeholder="Name" value={this.state.banner_h2} onChange={this.onChange} />
+                <input className="form-control" type="text" name="banner_h2" placeholder="Name" value={this.state.banner_h2} onChange={this.onChange} />
               </div>
             </div>
             <div className="row">

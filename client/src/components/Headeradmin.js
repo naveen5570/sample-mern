@@ -38,6 +38,7 @@ class Headeradmin extends Component {
             <li><Link to="/admin/request-list">Request List</Link></li>
             <li><Link to="/admin/service-list">Service List</Link></li>
             <li><Link to="/admin/home">Home</Link></li>
+            <li><Link to="/admin/phome">Professional Page</Link></li>
             <li><Link to="/admin/logout">Logout</Link></li>
         </ul>
         </div>

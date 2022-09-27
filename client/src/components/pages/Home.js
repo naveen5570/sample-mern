@@ -3,6 +3,7 @@ import '../../App.css';
 import '../../Style.css';
 import '../../script.js';
 import { Link, useHistory, useParams } from 'react-router-dom';
+import Footer from '../Footer';
 import axios from 'axios';
 
 class Home extends Component {
@@ -233,7 +234,7 @@ console.log('this=>'+homes);
 </div>
 </div>
 </div>
-
+<Footer/>
 
       </>
         

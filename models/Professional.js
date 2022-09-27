@@ -32,7 +32,7 @@ const ProfessionalSchema = new mongoose.Schema({
   },
   city:{type: String},
   zipcode:{type: String},
-  specialisation:{type:String},
+  specialisation:{type:Array},
   experience:{type:String},
   qualification:{type:String},
   standard_fees:{type:String},
