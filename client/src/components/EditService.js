@@ -90,7 +90,7 @@ class EditService extends Component {
       <div className="row">
         <div className="col-md-2">
           
-        <Link to='/'><img src="../img/logo.jpg" alt="logo"/></Link>
+        <Link to='/'><img src="/img/logo.jpg" alt="logo"/></Link>
         </div>
         <div className="col-md-7">
       

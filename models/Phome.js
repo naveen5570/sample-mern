@@ -24,7 +24,7 @@ const PhomeSchema = new mongoose.Schema({
   section_1_heading: {
     type: String
   },
-  section_1_paragraph: {
+  section_1_description: {
     type: String
   },
   section_1_link: {

@@ -93,7 +93,7 @@ class AddService extends Component {
       <div className="row">
         <div className="col-md-2">
           
-        <Link to='/'><img src="./img/logo.jpg" alt="t"/></Link>
+        <Link to='/'><img src="/img/logo.jpg" /></Link>
         </div>
         <div className="col-md-7">
       
@@ -125,7 +125,8 @@ class AddService extends Component {
               <div className="form-group col-md-12">
                 <label className="form-label">Service Description</label>
                 <textarea className="form-control" name="description" placeholder="Type here" value={this.state.description} onChange={this.onChange}></textarea>
-                <input className="form-control button-nav" name="submit" value="Create Request" type="submit" />
+                <br/>
+                <input className="form-control button-nav" name="submit" value="Add Service" type="submit" />
               </div>
               
             </div>

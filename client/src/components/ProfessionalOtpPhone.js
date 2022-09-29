@@ -92,7 +92,7 @@ class ProfessionalOtpPhone extends Component {
 </form>
 
 </div>
-<Link className="button-nav otp" to="/otp-verify">Submit</Link>
+<Link className="button-nav otp" to="/professional-otp-verify">Submit</Link>
             </div>
           </div>
         </div>

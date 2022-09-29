@@ -3,7 +3,7 @@ import '../App.css';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import jwtDecode from 'jwt-decode';
-import ReqCard from './UserReqCardPendingApplied';
+import ReqCard from './ReqCardPendingApplied';
 import Header from './Header';
 
 class ProfessionalActiveRequests extends Component {
@@ -16,7 +16,7 @@ class ProfessionalActiveRequests extends Component {
 
   componentDidMount() {
     const token = localStorage.getItem("professional-token");
-    axios.get('/api/professionals/get-professional/'+token).then(res => {
+    axios.get('api/professionals/get-professional/'+token).then(res => {
       this.setState({
         prof: res.data
        });
@@ -29,23 +29,17 @@ class ProfessionalActiveRequests extends Component {
     {
     window.location.href='/waiting-for-approval'; 
     }
+    else if(res.data.status==3)
+    {
+    window.location.href='/professional-profile'; 
+    }
     })
     .catch(err =>{
       console.log('Error from professional');
     })
-    const p_status = localStorage.getItem("p_status");
-    if(!token)
-    {
-      window.location.href = "/login-as-professional";
-    }
-    if(p_status==2)
-    {
-    window.location.href="/disapproved-professional";
-    }
-    else if(p_status==0)
-    {
-    window.location.href='/waiting-for-approval'; 
-    }
+    
+    
+    
     const u = jwtDecode(token);
     console.log(u.id);
     axios

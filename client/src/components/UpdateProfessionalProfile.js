@@ -41,7 +41,7 @@ class UpdateProfessionalProfile extends Component {
   componentDidMount() {
     const token = localStorage.getItem("professional-token");
     const ru = jwtDecode(token);
-//console.log('test=>'+ru);
+    console.log('test=>'+ru);
     axios.get('/api/professionals/get-professional/'+token).then(res => {
         this.setState({
           prof: res.data,
@@ -59,7 +59,7 @@ class UpdateProfessionalProfile extends Component {
       zipcode:res.data.zipcode,
       specialisation:res.data.specialisation,
       experience:res.data.experience,
-      experience:res.data.experience,
+      qualification:res.data.qualification,
       standard_fees:res.data.standard_fees,
       availability_hours1:res.data.availability_hours1,
       availability_hours2:res.data.availability_hours2
@@ -134,28 +134,8 @@ class UpdateProfessionalProfile extends Component {
     axios
       .post('/api/professionals/profile', data)
       .then(res => {
-        this.setState({
-          name:'',
-          
-          description:'',
-          photo_id: '',
-          registered_address: '',
-          office_address: '',
-          country: '',
-          state_or_province: '',
-          radius_to_cater: '',
-          city:'',
-          zipcode:'',
-          specialisation:'',
-          experience:'',
-          qualification:'',
-          fees:'',
-          professional_card: '',
-          status: '',
-          availability_hours1:'',
-          availability_hours2:''
-        });
-        //alert("Profile updated");
+        
+        alert("Profile updated");
         //window.location.href = "/profile-updated";
       })
       .catch(err => {
@@ -300,12 +280,12 @@ class UpdateProfessionalProfile extends Component {
 
               <div className="form-check col-md-4">
                 <div className='check-box'>
-                  <input type="checkbox" onChange={this.handleCheckbox} name="specialisation" className="form-check-input" value="Plumbing Services" /><label className="form-check-label" >Plumbing Services</label>
+                  <input type="checkbox" onChange={this.handleCheckbox} name="specialisation" className="form-check-input" value="Plumbing Services" defaultChecked /><label className="form-check-label" >Plumbing Services</label>
                 </div>
               </div>
               <div className="form-check col-md-4">
                 <div className='check-box'>
-                  <input type="checkbox" onChange={this.handleCheckbox} name="specialisation" className="form-check-input" value="Carpenter Services" /><label className="form-check-label" >Carpenter Services</label>
+                  <input type="checkbox" onChange={this.handleCheckbox} name="specialisation" className="form-check-input" value="Carpenter Services" defaultChecked /><label className="form-check-label" >Carpenter Services</label>
                 </div>
               </div>
 
@@ -316,7 +296,7 @@ class UpdateProfessionalProfile extends Component {
               </div>
               <div className="form-check col-md-4">
                 <div className='check-box'>
-                  <input type="checkbox" onChange={this.handleCheckbox}  name="specialisation" className="form-check-input" value="Roofing Services" /><label className="form-check-label" >Roofing Services</label>
+                  <input type="checkbox" onChange={this.handleCheckbox}  name="specialisation" className="form-check-input" value="Roofing Services" defaultChecked /><label className="form-check-label" >Roofing Services</label>
                 </div>
               </div>
               <div className="form-check col-md-4">
@@ -357,6 +337,7 @@ class UpdateProfessionalProfile extends Component {
                 <label className="form-label">Qualification<span>*</span></label>
                 <select className="form-control" name="qualification" value={this.state.qualification} onChange={this.onChange} >
                   <option value="">Qualification</option>
+                  <option value="Graduate">Graduate</option>
                   <option value="Post Graduate">Post Graduate</option>
                 </select>
               </div>

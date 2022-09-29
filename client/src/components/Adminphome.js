@@ -146,14 +146,14 @@ class Adminphome extends Component {
             
           </div>
           <div className="card-box">
-            <h4>Banner Bottom Section</h4>
+            <h4>Section 1</h4>
             <div className="row">
               <div className="form-group col-md-6">
-                <label className="form-label">Banner Bottom Heading</label>
+                <label className="form-label">Section 1 Heading</label>
                 <input className="form-control" type="text" name="banner_bottom_heading" placeholder="Name" value={this.state.banner_bottom_heading} onChange={this.onChange} />
               </div>
               <div className="form-group col-md-6">
-              <label className="form-label">Banner Area Second Heading</label>
+              <label className="form-label">Section 1 Link</label>
                 <input className="form-control" type="text" name="banner_bottom_link" placeholder="Name" value={this.state.banner_bottom_link} onChange={this.onChange} />
               </div>
               
@@ -161,20 +161,21 @@ class Adminphome extends Component {
             
           </div>
           <div className="card-box">
-            <h4>Middle Section</h4>
+            <h4>Section 2</h4>
             <div className="row">
             <div className="col-md-6 form-group">
-              <label className="form-label">Middle Section Heading</label>
+              <label className="form-label">Section 2 Heading</label>
                 <input className="form-control" type="text" name="section_1_heading" placeholder="Type Registered Address" value={this.state.section_1_heading} onChange={this.onChange} />
               </div>
               <div className="col-md-6 form-group">
-              <label className="form-label">Middle Section Description</label>
-              <textarea className="form-control" name="section_1_description" placeholder="Type description here" value={this.state.section_1_heading} onChange={this.onChange}></textarea>
-              </div>
-              <div className="col-md-6 form-group">
-              <label className="form-label">Middle Section Link</label>
+              <label className="form-label">Section 2 Link</label>
               <input className="form-control" type="text" name="section_1_link" placeholder="Type Registered Address" value={this.state.section_1_link} onChange={this.onChange} />
               </div>
+              <div className="col-md-12 form-group">
+              <label className="form-label">Section 2 Description</label>
+              <textarea className="form-control" name="section_1_description" placeholder="Type description here" value={this.state.section_1_description} onChange={this.onChange}></textarea>
+              </div>
+              
             </div>
             
             </div>

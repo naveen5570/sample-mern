@@ -10,7 +10,7 @@ const ServiceSchema = new mongoose.Schema({
     type: String
   },
   icon:{
-    type:String, default:"img.png"
+    type:String, default:"image1.png"
   }
 },{ timestamps: true });
 

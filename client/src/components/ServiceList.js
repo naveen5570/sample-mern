@@ -48,7 +48,7 @@ class ServiceList extends Component {
       <div className="row">
         <div className="col-md-2">
           
-        <Link to='/' ><img src="./img/logo.jpg"/></Link>
+        <Link to='/' ><img src="/img/logo.jpg"/></Link>
         </div>
         <div className="col-md-7">
       
@@ -70,7 +70,9 @@ class ServiceList extends Component {
         <br/><br/>
 
 <div className="list">
-<h1 className="page-title">Services List</h1>
+
+<h1 className="page-title">Services List <div className="btn btn-info btn-right"><Link to="/admin/add-service">Add Service</Link></div></h1>
+
 <div className="card-container1 col-md-12">
 
  <div className="desc list_container">

@@ -17,7 +17,9 @@ import Professional from './components/Professional';
 import Request from './components/Request';
 import OtpPhone from './components/OtpPhone';
 import OtpVerify from './components/OtpVerify';
+import PotpVerify from './components/PotpVerify';
 import ThanksSignup from './components/ThanksSignup';
+import PthanksSignup from './components/PthanksSignup';
 import RequestCreated from './components/RequestCreated';
 import RequestList from './components/RequestList';
 import ApplicationList from './components/RequestApplication';
@@ -41,6 +43,7 @@ import HiredSuccessfully from './components/HiredSuccessfully';
 import ActiveRequests from './components/ActiveRequests';
 import ProfessionalActiveRequests from './components/ProfessionalActiveRequests';
 import UserViewProfessionalProfile from './components/UserViewProfessionalProfile';
+import AdminViewProfessionalProfile from './components/AdminViewProfessionalProfile';
 import AdminProfessionalList from './components/AdminProfessionalList';
 import AdminUserList from './components/AdminUserList';
 import AdminRequestList from './components/AdminRequestList';
@@ -79,9 +82,11 @@ const App = () => {
           <Route exact path='/create-request' element={<Request/>} />
           <Route exact path='/phone-otp' element={<OtpPhone/>} />
           <Route exact path='/otp-verify' element={<OtpVerify/>} />
+          <Route exact path='/professional-otp-verify' element={<PotpVerify/>} />
           <Route exact path='/professional-phone-otp' element={<ProfessionalOtpPhone/>} />
           <Route exact path='/professional-otp-verify' element={<ProfessionalOtpVerify/>} />
           <Route exact path='/thanks-signup' element={<ThanksSignup/>} />
+          <Route exact path='/professional-thanks-signup' element={<PthanksSignup/>} />
           <Route exact path='/request-created' element={<RequestCreated/>} />
           <Route exact path='/profile-updated' element={<ProfileUpdated/>} />
           <Route exact path='/request-list' element={<RequestList/>} />
@@ -94,6 +99,7 @@ const App = () => {
           <Route exact path='/completed-requests' element={<CompletedRequest/>} />
           <Route exact path='/view-professional-profile' element={<ViewProfessionalProfile/>} />
           <Route exact path='/view-professional/:id' element={<UserViewProfessionalProfile/>} />
+          <Route exact path='/admin/view-professional/:id' element={<AdminViewProfessionalProfile/>} />
           <Route exact path='/view-request/:id' element={<ViewRequest/>} />
           <Route exact path='/user-view-request/:id' element={<ViewRequestUser/>} />
           <Route exact path='/pending-requests' element={<PendingRequests/>} />

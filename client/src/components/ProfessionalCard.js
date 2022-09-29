@@ -9,18 +9,27 @@ const ProfessionalCard = (props) => {
         <div className="card-container col-md-12">
            <div className="desc list_container">
                 <h1 className="list_title">
-                    <Link to={`#`}>
+                    <Link to={'/admin/view-professional/'+reqq._id}>
                         { reqq.name }
                     </Link>
                     
                 </h1>
                 <p>{ reqq.specialisation } </p><p>{ reqq.createdAt }</p>
-                <span className="btn-right">&nbsp;</span>
-                {reqq.status!=1 ? <Link to={`/admin/approve-professional/${reqq._id}`} className="btn btn-info btn-right">
-                        Approve
-                    </Link> : <Link to={`/admin/disapprove-professional/${reqq._id}`} className="btn btn-info btn-right">
-                        Disapprove
-                    </Link>}
+                
+                 
+                  
+                 
+                 
+                 
+{(function(){
+    if (reqq.status==1) {
+        return <Link to={`/admin/disapprove-professional/${reqq._id}`} className="btn btn-info btn-right">disapprove</Link>
+    } else if (reqq.status==2) {
+        return <Link to={`/admin/approve-professional/${reqq._id}`} className="btn btn-info btn-right">Approve</Link>
+    } else {
+        return <><Link to={`/admin/disapprove-professional/${reqq._id}`} className="btn btn-info btn-right">disapprove</Link><span className="btn-right">&nbsp;</span><Link to={`/admin/approve-professional/${reqq._id}`} className="btn btn-info btn-right">Approve</Link></>
+    }
+}).call(this)}
             </div>
 
         </div>

@@ -3,7 +3,7 @@ import '../App.css';
 import axios, { Axios } from 'axios';
 import { Link } from 'react-router-dom';
 
-class OtpVerify extends Component {
+class PotpVerify extends Component {
   constructor() {
     super();
     this.state = {
@@ -107,4 +107,4 @@ class OtpVerify extends Component {
   }
 }
 
-export default OtpVerify;
+export default PotpVerify;

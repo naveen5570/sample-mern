@@ -3,7 +3,7 @@ import '../App.css';
 import axios, { Axios } from 'axios';
 import { Link } from 'react-router-dom';
 
-class OtpVerify extends Component {
+class PthanksSignup extends Component {
   constructor() {
     super();
     this.state = {
@@ -31,7 +31,6 @@ class OtpVerify extends Component {
           phone: ''
         });
         //alert(res.data.msg);
-        window.location.href = "/create-request";
       })
       .catch(err => {
         alert(err.data.msg);
@@ -60,7 +59,7 @@ class OtpVerify extends Component {
       <div className="container">
       <div className="row">
         <div className="col-md-2">
-        <Link to='/'><img src="./img/logo.jpg"/></Link>
+        <Link to='/'><img src="/img/logo.jpg"/></Link>
         </div>
         <div className="col-md-4  ">
       
@@ -74,31 +73,15 @@ class OtpVerify extends Component {
       
       <div className='col-md-12 banner-header'><h1>Lorem Ipsum</h1></div>
       <div className="middle-section">
-        <div className="middle">
+        <div className="middle_thanks">
         <div className="row">
-          <div className="col-md-5 left_section">
+          <div className="col-md-12">
             <div className="content-left">
-<h3 className='title'>Verify Your Phone Number!</h3>
+                <h3>Your Sign up is Successful!</h3>
+<h5>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.<br/><br/><Link className="button-nav" to="/login-as-professional">LOGIN</Link></h5>
 
           </div></div>
-          <div className="col-md-7 right_section">
-          <div className="content-right">
-          <h3 className='title_right'>Please Enter One-Time Password To Verify Your Account</h3>
-
-<div className="form-register"><p>A one-time password has been sent to your phone number</p>
-<form noValidate onSubmit={this.onSubmit}>
-<div id="divOuter">
-    <div id="divInner">
-        <input id="partitioned" type="text" maxlength="6" />
-    </div>
-</div>
-
-</form>
-
-</div>
-<Link className="button-nav otp" to="/professional-thanks-signup">Validate</Link>
-            </div>
-          </div>
+          
         </div>
         </div>
       </div>
@@ -107,4 +90,4 @@ class OtpVerify extends Component {
   }
 }
 
-export default OtpVerify;
+export default PthanksSignup;

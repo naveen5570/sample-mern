@@ -4,9 +4,9 @@ import axios from 'axios';
 import jwtDecode from 'jwt-decode';
 import { Link, useParams } from 'react-router-dom';
 
-import Header from './Header';
+import Header from './Headeradmin';
 
-class UserViewProfessionalProfile extends Component {
+class AdminViewProfessionalProfile extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -51,7 +51,7 @@ class UserViewProfessionalProfile extends Component {
       <div className="row">
         <div className="col-md-2">
           
-        <Link to='/'><img src="../img/logo.jpg"/></Link>
+        <Link to='/'><img src="/img/logo.jpg"/></Link>
         </div>
         <div className="col-md-7">
       
@@ -65,19 +65,7 @@ class UserViewProfessionalProfile extends Component {
       </div>
       <div className="container-fluid">
       <div className='row'>
-      <div className="col-md-2 dash_menu">
-        <div className="left_menu">
-        <ul><li><a>Dashboard </a></li>
-            <li><Link to='/create-request'>Create Request</Link></li>
-            <li ><Link to='/pending-requests'>Pending Requests</Link></li>
-            <li className='active_dash'><Link to='/user-active-requests'>Active Requests</Link></li>
-            
-            <li><a>Closed Requests</a></li>
-            <li className='active_dash'><Link to='/request-applications-list'>Request Applications</Link></li>
-            <li><Link to='/user-logout'>Logout</Link></li>
-        </ul>
-        </div>
-        </div>
+      <Header />
         <div className='col-md-10 menu-right'>
       
         <div className="dashboard-right ">
@@ -86,8 +74,8 @@ class UserViewProfessionalProfile extends Component {
         
 <div className="row">
   <div className="col-md-8">
-    <h4><img src="../img/profile-img.jpg" width="80"/>{reqqs.name}</h4>
-    <h4>About me</h4>
+    <h4><img src="/img/profile-img.jpg" width="80"/>{reqqs.name}</h4>
+    <h4>About Professional</h4>
     <p>{reqqs.description}</p>
     <h4>Professional Information</h4>
     <p><strong>Email:</strong> {reqqs.email}</p>
@@ -122,6 +110,6 @@ export default () => {
     const params = useParams();
     //console.log(params);
   return (
-      <UserViewProfessionalProfile params={params} />
+      <AdminViewProfessionalProfile params={params} />
   )
 }

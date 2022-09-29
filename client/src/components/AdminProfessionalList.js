@@ -80,7 +80,8 @@ class AdminProfessionalList extends Component {
       
       <div className="ShowBookList">
         <div className="container">
-          <br/><br/>
+          
+          <h2>All Professionals</h2>
 
           <div className="list">
              {reqList}

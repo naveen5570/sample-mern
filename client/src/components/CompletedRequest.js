@@ -29,6 +29,10 @@ class CompletedRequest extends Component {
     {
     window.location.href='/waiting-for-approval'; 
     }
+    else if(res.data.status==3)
+    {
+    window.location.href='/professional-profile'; 
+    }
     })
     .catch(err =>{
       console.log('Error from professional');
@@ -38,14 +42,7 @@ class CompletedRequest extends Component {
     {
       window.location.href = "/login-as-professional";
     }
-    if(p_status==2)
-    {
-    window.location.href="/disapproved-professional";
-    }
-    else if(p_status==0)
-    {
-    window.location.href='/waiting-for-approval'; 
-    }
+    
     const u = jwtDecode(token);
     console.log(u.id);
     axios

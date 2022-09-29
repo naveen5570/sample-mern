@@ -30,6 +30,10 @@ class RequestList extends Component {
     {
     window.location.href='/waiting-for-approval'; 
     }
+    else if(res.data.status==3)
+    {
+    window.location.href='/professional-profile'; 
+    }
     })
     .catch(err =>{
       console.log('Error from professional');

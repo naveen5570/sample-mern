@@ -20,15 +20,7 @@ class ViewProfessionalProfile extends Component {
       this.setState({
         prof: res.data
        });
-       //console.log('status=>'+res.data.status);
-       if(res.data.status==2)
-    {
-    window.location.href="/disapproved-professional";
-    }
-    else if(res.data.status==0)
-    {
-    window.location.href='/waiting-for-approval'; 
-    }
+       
     })
     .catch(err =>{
       console.log('Error from professional');
@@ -38,14 +30,7 @@ class ViewProfessionalProfile extends Component {
     {
       window.location.href = "/login-as-professional";
     }
-    if(p_status==2)
-    {
-    window.location.href="/disapproved-professional";
-    }
-    else if(p_status==0)
-    {
-    window.location.href='/waiting-for-approval'; 
-    }
+    
     const u = jwtDecode(token);
     console.log(u.id);
     
@@ -104,8 +89,7 @@ class ViewProfessionalProfile extends Component {
   <div className="col-md-8">
     <h4><img src="../img/profile-img.jpg" width="80"/>{reqqs.name}</h4>
     <h4>About me</h4>
-    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
-    <p>It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+    <p>{reqqs.description}</p>
     <h4>Professional Information</h4>
     <p><strong>Email:</strong> {reqqs.email}</p>
     <p><strong>Experience:</strong> {reqqs.experience} years</p>

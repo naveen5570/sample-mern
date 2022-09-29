@@ -10,6 +10,9 @@ const ProfessionalSchema = new mongoose.Schema({
   displayName: {
     type: String
   },
+  description:{
+type:String
+  },
   email: {
     type: String,
     required: true

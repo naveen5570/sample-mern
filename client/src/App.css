@@ -256,4 +256,8 @@ h3.title { font-size:40px; line-height: 54px;}
   .form-control {background:#f3f3f3;}
   .form-control.button-nav {background:#3aaf9f}
   
+  .ShowBookList .container h2 {text-align:center; color:#333; padding:20px 0}
+
+  .page-title .btn-right a{color:#fff;}
+  
 
