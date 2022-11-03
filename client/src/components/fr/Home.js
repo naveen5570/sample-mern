@@ -76,10 +76,10 @@ console.log('this=>'+homes);
 		  <li className="nav-item">
           <Link className="nav-link btn btn-info" aria-current="page" to="/register">Sign Up</Link>
         </li>
-        <li className="nav-item"><select name="language" id="language1">
-           <option value="English" >English</option>
-           <option value="French" selected="selected">French</option> 
-          </select></li>
+        <li className="nav-item">
+          <button className="en lan" data-id="en">English</button>
+          <button className="fr lan" data-id="fr">French</button>
+          </li>
           </ul>
     </div>
   </div>

@@ -4,6 +4,7 @@ import axios, { Axios } from 'axios';
 import { Link } from 'react-router-dom';
 import jwtDecode from 'jwt-decode';
 import Stripe from 'react-stripe-checkout';
+import Headermain from './Headermain';
 
 class UserRegister extends Component {
   constructor() {
@@ -85,21 +86,7 @@ class UserRegister extends Component {
 */
     return (
       <div>
-      <div className="top-header">
-      <div className="container">
-      <div className="row">
-        <div className="col-md-2">
-        <Link to='/'><img src="./img/logo.jpg"/></Link>
-        </div>
-        <div className="col-md-4  ">
-      
-        </div>
-        <div className="col-md-6">
-          <ul><li><Link to="/register-as-professional" className="lang">Register As Professional</Link></li><li><Link to="/login" className="lang">Sign In</Link></li><li><Link to="/" className='button-nav lang'>Sign Up</Link></li></ul>
-        </div>
-      </div>
-      </div>
-      </div>
+      <Headermain/>
       
       <div className='col-md-12 banner-header'><h1 className="lang">Lorem Ipsum</h1></div>
       <div className="middle-section">

@@ -56,10 +56,10 @@
   }
 
 });
-$(document).on('change','#language1',function(){
+$(document).on('click','.lan',function(){
   //alert(this.value);
-
-  if(this.value=='English')
+//alert($(this).data("id"));
+  if($(this).data("id")=='en')
   {
   window.location.href="/";  
   }
