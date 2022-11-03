@@ -78,21 +78,21 @@ class HiredSuccessfully extends Component {
       
         <div className="col-md-2 dash_menu">
         <div className="left_menu">
-        <ul><li><a>Dashboard </a></li>
-            <li><Link to='/create-request'>Create Request</Link></li>
-            <li><Link to='/pending-requests'>Pending Requests</Link></li>
-            <li className='active_dash'><Link to='/user-active-requests'>Active Requests</Link></li>
-            <li><a>Closed Requests</a></li>
-            <li><Link to='/request-application-list'>Request Applications</Link></li>
-            <li><Link to='/user-logout'>Logout</Link></li>
+        <ul><li><a className="lang">Dashboard </a></li>
+            <li><Link to='/create-request' className="lang">Create Request</Link></li>
+            <li><Link to='/pending-requests' className="lang">Pending Requests</Link></li>
+            <li className='active_dash'><Link to='/user-active-requests' className="lang">Active Requests</Link></li>
+            <li><a className="lang">Closed Requests</a></li>
+            <li><Link to='/request-application-list' className="lang">Request Applications</Link></li>
+            <li><Link to='/user-logout' className="lang">Logout</Link></li>
         </ul>
         </div>
         </div>
         <div className='col-md-10 menu-right'>
         <div className="dashboard-right thanks_msg">
         <div className="content-left">
-                <h3>Payment Completed Successfully!</h3>
-<h5>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</h5>
+                <h3 className="lang">Payment Completed Successfully!</h3>
+<h5 className="lang">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</h5>
 
           </div></div>
           

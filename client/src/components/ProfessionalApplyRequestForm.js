@@ -120,13 +120,13 @@ class ProfessionalApplyRequestForm extends Component {
             
             <div className="row">
               <div className="col-md-5 form-group">
-                <label className="form-label">Estimate time of Service (in hours) <span>* </span></label>
+                <label className="form-label lang">Estimate time of Service (in hours)</label>
                 <input className="form-control" type="text" name="time_of_service" placeholder="Type Here" value={this.state.time_of_service} onChange={this.onChange} />
               </div>
               </div>
               <div className="row">
               <div className="col-md-5 form-group">
-                <label className="form-label">Fees Applicable<span>*</span></label>
+                <label className="form-label lang">Fees Applicable</label>
                 <input className="form-control" type="text" name="fees" placeholder="Type Here" value={this.state.fees} onChange={this.onChange} />
                 <input type="hidden" name="professional_id" value=''/>
               </div>

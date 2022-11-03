@@ -4,6 +4,7 @@ import axios from 'axios';
 import { Link } from 'react-router-dom';
 import jwtDecode from 'jwt-decode';
 import Header from './Headeradmin';
+import Headertop from './Headeradmintop';
 import Footer from './Footer';
 
 class Adminphome extends Component {
@@ -24,6 +25,11 @@ class Adminphome extends Component {
   }
 
   componentDidMount() {
+    const token = localStorage.getItem("lang");
+    if(token=='fr')
+    {
+      window.location.href = '/admin/frphome'; 
+    }
     axios
       .get('/api/pages/professional-page')
       .then(res => {
@@ -102,58 +108,43 @@ class Adminphome extends Component {
     return (
 
 <div>
-      <div className="dashboard-top-header">
-      <div className="container-fluid">
-      <div className="row">
-        <div className="col-md-2">
-          
-        <Link to='/'><img src="../img/logo.jpg" alt="logo"/></Link>
-        </div>
-        <div className="col-md-7">
-      
-        </div>
-        <div className="col-md-3">
-          
-        </div>
-      </div>
-      </div>
-      </div>
+      <Headertop/>
 	  <div className='container-fluid'>
       <div className='row'>
       
         <Header/>
 		<div className='col-md-10 menu-right'>
       <div className="dashboard-right">
-        <h1>Update Home Page Details</h1>
+        <h1 className="lang">Update Home Page Details</h1>
 
         <form noValidate onSubmit={this.onSubmit} className="profile form" encType="multipart/form-data">
           <div className="card-box">
-            <h4>Banner Section</h4>
+            <h4 className="lang">Banner Section</h4>
             <div className="row">
               <div className="form-group col-md-6">
-                <label className="form-label">Banner Area First Heading</label>
+                <label className="form-label lang">Banner Area First Heading</label>
                 <input className="form-control" type="text" name="banner_h1" placeholder="Name" value={this.state.banner_h1} onChange={this.onChange} />
               </div>
               <div className="form-group col-md-6">
-              <label className="form-label">Banner Area Second Heading</label>
+              <label className="form-label lang">Banner Area Second Heading</label>
                 <input className="form-control" type="text" name="banner_h3" placeholder="Name" value={this.state.banner_h3} onChange={this.onChange} />
               </div>
               <div className="form-group col-md-6">
-              <label className="form-label">Banner Area Get Started Link</label>
+              <label className="form-label lang">Banner Area Get Started Link</label>
                 <input className="form-control" type="text" name="banner_link" placeholder="Name" value={this.state.banner_link} onChange={this.onChange} />
               </div>
             </div>
             
           </div>
           <div className="card-box">
-            <h4>Section 1</h4>
+            <h4 className="lang">Section 1</h4>
             <div className="row">
               <div className="form-group col-md-6">
-                <label className="form-label">Section 1 Heading</label>
+                <label className="form-label lang">Section 1 Heading</label>
                 <input className="form-control" type="text" name="banner_bottom_heading" placeholder="Name" value={this.state.banner_bottom_heading} onChange={this.onChange} />
               </div>
               <div className="form-group col-md-6">
-              <label className="form-label">Section 1 Link</label>
+              <label className="form-label lang">Section 1 Link</label>
                 <input className="form-control" type="text" name="banner_bottom_link" placeholder="Name" value={this.state.banner_bottom_link} onChange={this.onChange} />
               </div>
               
@@ -161,18 +152,18 @@ class Adminphome extends Component {
             
           </div>
           <div className="card-box">
-            <h4>Section 2</h4>
+            <h4 className="lang">Section 2</h4>
             <div className="row">
             <div className="col-md-6 form-group">
-              <label className="form-label">Section 2 Heading</label>
+              <label className="form-label lang">Section 2 Heading</label>
                 <input className="form-control" type="text" name="section_1_heading" placeholder="Type Registered Address" value={this.state.section_1_heading} onChange={this.onChange} />
               </div>
               <div className="col-md-6 form-group">
-              <label className="form-label">Section 2 Link</label>
+              <label className="form-label lang">Section 2 Link</label>
               <input className="form-control" type="text" name="section_1_link" placeholder="Type Registered Address" value={this.state.section_1_link} onChange={this.onChange} />
               </div>
               <div className="col-md-12 form-group">
-              <label className="form-label">Section 2 Description</label>
+              <label className="form-label lang">Section 2 Description</label>
               <textarea className="form-control" name="section_1_description" placeholder="Type description here" value={this.state.section_1_description} onChange={this.onChange}></textarea>
               </div>
               
@@ -180,14 +171,14 @@ class Adminphome extends Component {
             
             </div>
           <div className="card-box">
-            <h4>Services Section</h4>
+            <h4 className="lang">Services Section</h4>
             <div className="row">
             <div className="col-md-6 form-group">
-              <label className="form-label">Service Heading</label>
+              <label className="form-label lang">Service Heading</label>
                 <input className="form-control" type="text" name="services_heading" placeholder="Type Registered Address" value={this.state.services_heading} onChange={this.onChange} />
               </div>
               <div className="col-md-12 form-group">
-              <label className="form-label">Service Description</label>
+              <label className="form-label lang">Service Description</label>
               <textarea className="form-control" name="services_description" placeholder="Type description here" value={this.state.services_description} onChange={this.onChange}></textarea>
               </div>
             </div>

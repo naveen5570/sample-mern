@@ -4,6 +4,7 @@ import axios from 'axios';
 import { Link } from 'react-router-dom';
 import jwtDecode from 'jwt-decode';
 import Header from './Headeradmin';
+import Headertop from './Headeradmintop';
 
 class AddService extends Component {
   constructor() {
@@ -41,6 +42,10 @@ class AddService extends Component {
     
   };
 
+  handlePhoto = e =>{
+    this.setState({photo:e.target.files[0]});
+  }
+
   onSubmit = e => {
     //alert('clicked');
     const token = localStorage.getItem("admin_token");
@@ -48,6 +53,7 @@ class AddService extends Component {
     e.preventDefault();
 
     const data = {
+          photo:this.state.photo,
           name: this.state.name,
           description: this.state.description
           
@@ -58,6 +64,7 @@ class AddService extends Component {
       .post('/api/services/create', data)
       .then(res => {
         this.setState({
+            photo:'',
             name: '',
             description: ''
         });
@@ -88,42 +95,31 @@ class AddService extends Component {
 */
     return (
 <div>
-      <div className="dashboard-top-header">
-      <div className="container-fluid">
-      <div className="row">
-        <div className="col-md-2">
-          
-        <Link to='/'><img src="/img/logo.jpg" /></Link>
-        </div>
-        <div className="col-md-7">
-      
-        </div>
-        <div className="col-md-3">
-          
-        </div>
-      </div>
-      </div>
-      </div>
+      <Headertop/>
 	  <div className='container-fluid'>
       <div className='row'>
       
         <Header />
 		<div className='col-md-10 menu-right'>
       <div className="dashboard-right">
-        <h1>Add a Service</h1>
+        <h1 className="lang">Add a Service</h1>
 
         <form noValidate onSubmit={this.onSubmit} className="request form" encType="multipart/form-data">
           <div className="card-box">
-            <h4>Service Information</h4>
+            <h4 className="lang">Service Information</h4>
             
             
             <div className="row">
-            <div className="col-md-12 form-group">
-                <label className="form-label">Service Name</label>
+            <div className="col-md-6 form-group">
+                <label className="form-label lang">Service Name</label>
                 <input className="form-control" type="text" name="name" placeholder="Type here" value={this.state.name} onChange={this.onChange} />
               </div>
+              <div className="col-md-6 form-group">
+                <label className="form-label lang">Service Photo</label>
+                <input className="form-control" type="file" name="photo" placeholder="Type here" value={this.state.photo} onChange={this.handlePhoto} />
+              </div>
               <div className="form-group col-md-12">
-                <label className="form-label">Service Description</label>
+                <label className="form-label lang">Service Description</label>
                 <textarea className="form-control" name="description" placeholder="Type here" value={this.state.description} onChange={this.onChange}></textarea>
                 <br/>
                 <input className="form-control button-nav" name="submit" value="Add Service" type="submit" />

@@ -95,29 +95,29 @@ class UserRegister extends Component {
       
         </div>
         <div className="col-md-6">
-          <ul><li><Link to="/register-as-professional">Register As Professional</Link></li><li><Link to="/login">Sign In</Link></li><li><Link to="/" className='button-nav'>Sign Up</Link></li></ul>
+          <ul><li><Link to="/register-as-professional" className="lang">Register As Professional</Link></li><li><Link to="/login" className="lang">Sign In</Link></li><li><Link to="/" className='button-nav lang'>Sign Up</Link></li></ul>
         </div>
       </div>
       </div>
       </div>
       
-      <div className='col-md-12 banner-header'><h1>Lorem Ipsum</h1></div>
+      <div className='col-md-12 banner-header'><h1 className="lang">Lorem Ipsum</h1></div>
       <div className="middle-section">
         <div className="middle">
         <div className="row">
           <div className="col-md-5 left_section">
             <div className="content-left">
-<h3>Welcome Back!</h3>
-<p>To keep connected with us please<br/>login with your personal info </p>
-<Link to="/login" className="button-nav">
+<h3 className="lang">Welcome Back!</h3>
+<p className="lang">To keep connected with us please<br/>login with your personal info </p>
+<Link to="/login" className="button-nav lang">
                   Sign in
               </Link>
           </div></div>
           <div className="col-md-7 right_section">
           <div className="content-right">
-          <h3>Create Account</h3>
+          <h3 className="lang">Create Account</h3>
 <div className="social"><li><a href="#"><img src="img/fb.png"/></a></li><li><a href="#"><img src="img/g+.png"/></a></li><li><a href="#"><img src="img/in.png"/></a></li></div>
-<div className="form-register"><p>or use your email for registration :</p>
+<div className="form-register"><p className="lang">or use your email for registration :</p>
 <form noValidate onSubmit={this.onSubmit}>
 <input type="text" name="name" placeholder="Name" value={this.state.name} onChange={this.onChange}/>
 <input type="email" name="email" placeholder="Email" value={this.state.email} onChange={this.onChange}/>

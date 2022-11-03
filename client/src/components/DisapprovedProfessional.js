@@ -83,9 +83,9 @@ class DisapproveProfessional extends Component {
         <div className='col-md-10 menu-right'>
         <div className="dashboard-right thanks_msg">
         <div className="content-left">
-                <h3>Registration Disapproved!</h3>
-<h5>Your Registration is Disapproved by the admin because of the Following Reason:<br/> {d_reason}</h5>
-<Link to="/update-professional-profile" className="btn btn-primary">Update Details</Link>
+                <h3 className="lang">Registration Disapproved!</h3>
+<h5 className="lang">Your Registration is Disapproved by the admin because of the Following Reason:<br/> {d_reason}</h5>
+<Link to="/update-professional-profile" className="btn btn-primary lang">Update Details</Link>
           </div></div>
           
         </div>

@@ -40,33 +40,33 @@ class Footer extends Component {
       <div className="col-md-2">
       <h2>Our Links</h2>
       <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#">About Us</a></li>
-      <li><a href="#">Contact</a></li>
-      <li><a href="#">News</a></li>
-      <li><a href="#">Pages</a></li>
+      <li><a href="#" className="lang">Home</a></li>
+      <li><a href="#" className="lang">About Us</a></li>
+      <li><a href="#" className="lang">Contact</a></li>
+      <li><a href="#" className="lang">News</a></li>
+      <li><a href="#" className="lang">Pages</a></li>
       </ul>
       </div>
       <div className="col-md-3">
       <h2>Our Services</h2>
       <ul>
-      <li><a href="#">Plumbing Services</a></li>
-      <li><a href="#">Carpenter Services</a></li>
-      <li><a href="#">Pest Control Services</a></li>
-      <li><a href="#">Roofing Services</a></li>
-      <li><a href="#">AC Repair and Services</a></li>
-      <li><a href="#">Electrician Services</a></li>
-      <li><a href="#">Cleaning and DisInfection Services</a></li>
+      <li><a href="#" className="lang">Plumbing Services</a></li>
+      <li><a href="#" className="lang">Carpenter Services</a></li>
+      <li><a href="#" className="lang">Pest Control Services</a></li>
+      <li><a href="#" className="lang">Roofing Services</a></li>
+      <li><a href="#" className="lang">AC Repair and Services</a></li>
+      <li><a href="#" className="lang">Electrician Services</a></li>
+      <li><a href="#" className="lang">Cleaning and DisInfection Services</a></li>
       </ul>	
       </div>
       <div className="col-md-4">
-      <h3>Subscribe To Our Newsletter</h3>
+      <h3 className="lang">Subscribe To Our Newsletter</h3>
       <input type="text" /> <input type="submit" className="btn btn-success"/>
       <div className="social"><a href="#"><img src="/img/fb-footer.png"/></a><a href="#"><img src="/img/twitter.png"/></a><a href="#"><img src="/img/insta.png"/></a></div>
       </div>
       </div>	
       </div>	
-      <div className="footer_bottom"><p>Copyright 2021. All rights are reserved.</p></div>
+      <div className="footer_bottom"><p className="lang">Copyright 2021. All rights are reserved.</p></div>
       </footer>
         
         

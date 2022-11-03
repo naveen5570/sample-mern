@@ -62,6 +62,13 @@ import DisapprovedProfessional from './components/DisapprovedProfessional';
 import WaitingForApproval from './components/WaitingForApproval';
 import UpdateProfessionalProfile from './components/UpdateProfessionalProfile';
 
+// French routes
+
+import Frhome from './components/fr/Home';
+import Frphome from './components/fr/Phome';
+import Adminfrhome from './components/fr/admin/Adminfrhome';
+import Adminfrphome from './components/fr/admin/Adminfrphome';
+
 const App = () => {
   return (
     
@@ -126,7 +133,12 @@ const App = () => {
           <Route exact path='/update-professional-profile' element={<UpdateProfessionalProfile/>} />
           
 
-          
+
+
+          <Route path='/fr' element={<Frhome/>} />
+          <Route path='/fr/professional' element={<Frphome/>} />
+          <Route exact path='/admin/frhome' element={<Adminfrhome/>} />
+          <Route exact path='/admin/frphome' element={<Adminfrphome/>} />
           
           </Routes>
       

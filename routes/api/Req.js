@@ -5,6 +5,7 @@ const bcrypt = require('bcrypt');
 const config = require('config');
 const jwt = require('jsonwebtoken');
 const mongoose = require('mongoose');
+const translate = require('@iamtraction/google-translate');
 // Load Book model
 //const Book = require('../../models/Book');
 const Request = require('../../models/Request');
@@ -141,6 +142,27 @@ router.get('/:id', (req, res) => {
   .catch(err => res.status(404).json({ noreqqfound: 'No reqq found' }));
 });
 
+
+
+router.post('/translate',function(req,res1){
+  translate(req.body.content, { from: 'en', to: 'fr' }).then(res => {
+  //console.log(res.text); // OUTPUT: ''
+  return res1.status(200).json({ data: res.text });
+   
+  }).catch(err => {
+    console.error(err);
+  });
+});
+
+router.post('/translate1',function(req,res1){
+  translate(req.body.content, { from: 'fr', to: 'en' }).then(res => {
+  //console.log(res.text); // OUTPUT: ''
+  return res1.status(200).json({ data: res.text });
+   
+  }).catch(err => {
+    console.error(err);
+  });
+});
 
 
 module.exports = router;

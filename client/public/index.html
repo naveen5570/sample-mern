@@ -27,6 +27,7 @@
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
+    
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
@@ -39,3 +40,41 @@
     -->
   </body>
 </html>
+<script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+<script>
+  jQuery(document).ready(function($){
+  $(document).on('change','#language',function(){
+  //alert(this.value);
+
+  if(this.value=='English')
+  {
+  window.location.href="/admin/home";  
+  }
+  else
+  {
+    window.location.href="/admin/frhome";
+  }
+
+});
+$(document).on('change','#language1',function(){
+  //alert(this.value);
+
+  if(this.value=='English')
+  {
+  window.location.href="/";  
+  }
+  else
+  {
+    window.location.href="/fr";
+  }
+
+});
+setTimeout(function() {
+    $('#loader-container').fadeOut('fast');
+}, 10000);
+});
+
+
+</script>
+
+

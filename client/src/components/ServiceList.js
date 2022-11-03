@@ -4,6 +4,7 @@ import axios from 'axios';
 import { Link, Redirect } from 'react-router-dom';
 import jwtDecode from 'jwt-decode';
 import Header from './Headeradmin';
+import Headertop from './Headeradmintop';
 
 class ServiceList extends Component {
   constructor(props) {
@@ -14,6 +15,9 @@ class ServiceList extends Component {
   }
 
   componentDidMount() {
+
+
+    
     const token = localStorage.getItem("admin_token");
     if(!token)
     {
@@ -43,23 +47,7 @@ class ServiceList extends Component {
 
     return (
       <div>
-<div className="dashboard-top-header">
-      <div className="container-fluid">
-      <div className="row">
-        <div className="col-md-2">
-          
-        <Link to='/' ><img src="/img/logo.jpg"/></Link>
-        </div>
-        <div className="col-md-7">
-      
-        </div>
-        <div className="col-md-3">
-          
-        </div>
-      </div>
-      </div>
-      
-      </div>
+<Headertop/>
       <div className="container-fluid">
       <div className='row'>
         <Header />
@@ -67,20 +55,19 @@ class ServiceList extends Component {
       
       <div className="ShowBookList">
         <div className="container">
-        <br/><br/>
-
+        
 <div className="list">
 
-<h1 className="page-title">Services List <div className="btn btn-info btn-right"><Link to="/admin/add-service">Add Service</Link></div></h1>
+<h1 className="page-title lang">Services List <div className="btn btn-info btn-right lang"><Link to="/admin/add-service">Add Service</Link></div></h1>
 
 <div className="card-container1 col-md-12">
 
  <div className="desc list_container">
   
 <table id="datatable">
-          <tr><th>Name</th><th>Description</th><th>Added On</th><th>Action</th></tr>
+          <tr><th className="lang">Name</th><th className="lang">Description</th><th className="lang">Added On</th><th className="lang">Action</th></tr>
    {reqqs.map(reqq => {
-          return <tr><td>{reqq.name}</td><td>{reqq.description}</td><td>{reqq.createdAt}</td><td><Link to={`/admin/edit-service/${reqq._id}`}>Edit</Link>/<Link to={`/admin/delete-service/${reqq._id}`}>Delete</Link></td></tr>
+          return <tr><td className="lang">{reqq.name}</td><td className="lang">{reqq.description}</td><td className="lang">{reqq.createdAt}</td><td className="lang"><Link to={`/admin/edit-service/${reqq._id}`}>Edit</Link>/<Link to={`/admin/delete-service/${reqq._id}`}>Delete</Link></td></tr>
             
         })}
    </table>

@@ -4,7 +4,9 @@ import axios from 'axios';
 import jwtDecode from 'jwt-decode';
 import { Link, useParams } from 'react-router-dom';
 
+
 import Header from './Headeradmin';
+import Headertop from './Headeradmintop';
 
 class AdminViewProfessionalProfile extends Component {
   constructor(props) {
@@ -46,49 +48,33 @@ class AdminViewProfessionalProfile extends Component {
 
     return (
       <div>
-<div className="dashboard-top-header">
-      <div className="container-fluid">
-      <div className="row">
-        <div className="col-md-2">
-          
-        <Link to='/'><img src="/img/logo.jpg"/></Link>
-        </div>
-        <div className="col-md-7">
-      
-        </div>
-        <div className="col-md-3">
-          
-        </div>
-      </div>
-      </div>
-      
-      </div>
+<Headertop/>
       <div className="container-fluid">
       <div className='row'>
       <Header />
         <div className='col-md-10 menu-right'>
       
         <div className="dashboard-right ">
-        <h2 className="page-title">Professional Profile</h2>
+        <h2 className="page-title lang">Professional Profile</h2>
     <div className="dashboard-cart">
         
 <div className="row">
   <div className="col-md-8">
-    <h4><img src="/img/profile-img.jpg" width="80"/>{reqqs.name}</h4>
-    <h4>About Professional</h4>
-    <p>{reqqs.description}</p>
-    <h4>Professional Information</h4>
-    <p><strong>Email:</strong> {reqqs.email}</p>
-    <p><strong>Experience:</strong> {reqqs.experience} years</p>
-    <p><strong>Standard Fees:</strong> {reqqs.standard_fees}</p>
+    <h4><img src="/img/profile-img.jpg" width="80"/><span className="lang">{reqqs.name}</span></h4>
+    <h4 className="lang">About Professional</h4>
+    <p className="lang">{reqqs.description}</p>
+    <h4 className="lang">Professional Information</h4>
+    <p><strong className="lang">Email:</strong><span className="lang">{reqqs.email}</span></p>
+    <p><strong className="lang">Experience:</strong><span className="lang">{reqqs.experience} years</span></p>
+    <p><strong className="lang">Standard Fees:</strong><span className="lang">{reqqs.standard_fees}</span></p>
     </div>
     <div className="col-md-4 profile_right">
-    <h4>Basic Information</h4>
-      <p><strong>Office Address:</strong> {reqqs.office_address}</p>
-      <p><strong>Radius to Cater:</strong> {reqqs.radius_to_cater}</p>
-      <p><strong>Registered Address:</strong> {reqqs.registered_address}</p>
-      <p><strong>Zipcode:</strong> {reqqs.zipcode}</p>
-      <p><strong>City:</strong> {reqqs.city}</p></div>
+    <h4 className="lang">Basic Information</h4>
+      <p><strong className="lang">Office Address:</strong><span className="lang">{reqqs.office_address}</span></p>
+      <p><strong className="lang">Radius to Cater:</strong><span className="lang">{reqqs.radius_to_cater}</span></p>
+      <p><strong className="lang">Registered Address:</strong><span className="lang">{reqqs.registered_address}</span></p>
+      <p><strong className="lang">Zipcode:</strong><span className="lang">{reqqs.zipcode}</span></p>
+      <p><strong className="lang">City:</strong><span className="lang">{reqqs.city}</span></p></div>
       
   </div>
         

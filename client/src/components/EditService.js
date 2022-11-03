@@ -107,18 +107,18 @@ class EditService extends Component {
         <Header/>
 		<div className='col-md-10 menu-right'>
       <div className="dashboard-right">
-        <h1>Update Service Details</h1>
+        <h1 className="lang">Update Service Details</h1>
 
         <form noValidate onSubmit={this.onSubmit} className="profile form" encType="multipart/form-data">
           <div className="card-box">
 
             <div className="row">
               <div className="form-group col-md-6">
-                <label className="form-label">Name</label>
+                <label className="form-label lang">Name</label>
                 <input className="form-control" type="text" name="name" placeholder="Name" value={this.state.name} onChange={this.onChange} />
               </div>
               <div className="form-group col-md-12">
-              <label className="form-label">Description</label>
+              <label className="form-label lang">Description</label>
               <textarea className="form-control" name="description" placeholder="Type description here" value={this.state.description} onChange={this.onChange}></textarea>
               </div>
             </div>

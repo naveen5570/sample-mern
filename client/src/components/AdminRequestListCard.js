@@ -10,10 +10,10 @@ const AdminRequestListCard = (props) => {
                 
                 
                 <tr>
-                <td>{ reqq.specialisation }</td>
-                <td>{ reqq.address_1 }</td>
+                <td className="lang">{ reqq.specialisation }</td>
+                <td className="lang">{ reqq.address_1 }</td>
                 
-                <td><Link to={`/view-Professional/${reqq._id}`} >View</Link></td>
+                <td><Link to={`/view-Professional/${reqq._id}`} className="lang">View</Link></td>
                 </tr>
 
                 

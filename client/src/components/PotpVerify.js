@@ -66,26 +66,26 @@ class PotpVerify extends Component {
       
         </div>
         <div className="col-md-6">
-          <ul><li><Link to="/register-as-professional">Register As Professional</Link></li><li><Link to="/login">Sign In</Link></li><li><Link to="/" className='button-nav'>Sign Up</Link></li></ul>
+          <ul><li><Link to="/register-as-professional" className="lang">Register As Professional</Link></li><li><Link to="/login" className="lang">Sign In</Link></li><li><Link to="/" className='button-nav lang'>Sign Up</Link></li></ul>
         </div>
       </div>
       </div>
       </div>
       
-      <div className='col-md-12 banner-header'><h1>Lorem Ipsum</h1></div>
+      <div className='col-md-12 banner-header'><h1 className="lang">Lorem Ipsum</h1></div>
       <div className="middle-section">
         <div className="middle">
         <div className="row">
           <div className="col-md-5 left_section">
             <div className="content-left">
-<h3 className='title'>Verify Your Phone Number!</h3>
+<h3 className='title lang'>Verify Your Phone Number!</h3>
 
           </div></div>
           <div className="col-md-7 right_section">
           <div className="content-right">
-          <h3 className='title_right'>Please Enter One-Time Password To Verify Your Account</h3>
+          <h3 className='title_right lang'>Please Enter One-Time Password To Verify Your Account</h3>
 
-<div className="form-register"><p>A one-time password has been sent to your phone number</p>
+<div className="form-register"><p className="lang">A one-time password has been sent to your phone number</p>
 <form noValidate onSubmit={this.onSubmit}>
 <div id="divOuter">
     <div id="divInner">
@@ -96,7 +96,7 @@ class PotpVerify extends Component {
 </form>
 
 </div>
-<Link className="button-nav otp" to="/professional-thanks-signup">Validate</Link>
+<Link className="button-nav otp lang" to="/professional-thanks-signup">Validate</Link>
             </div>
           </div>
         </div>

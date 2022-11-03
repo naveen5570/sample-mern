@@ -137,26 +137,26 @@ class Request extends Component {
       
         <div className="col-md-2 dash_menu">
         <div className="left_menu">
-        <ul><li><a>Dashboard </a></li>
-            <li className='active_dash'><Link to='/create-request'>Create Request</Link></li>
-            <li><Link to='/pending-requests'>Pending Requests</Link></li>
-            <li className='active_dash'><Link to='/user-active-requests'>Active Requests</Link></li>
-            <li><a>Closed Requests</a></li>
-            <li><Link to='/request-applications-list'>Request Applications</Link></li>
-            <li><Link to='/user-logout'>Logout</Link></li>
+        <ul><li><a className="lang">Dashboard </a></li>
+            <li className='active_dash'><Link className="lang" to='/create-request'>Create Request</Link></li>
+            <li><Link to='/pending-requests' className="lang">Pending Requests</Link></li>
+            <li className='active_dash'><Link className="lang" to='/user-active-requests'>Active Requests</Link></li>
+            <li><a className="lang">Closed Requests</a></li>
+            <li><Link to='/request-applications-list' className="lang">Request Applications</Link></li>
+            <li><Link to='/user-logout' className="lang">Logout</Link></li>
         </ul>
         </div>
         </div>
 		<div className='col-md-10 menu-right'>
       <div className="dashboard-right">
-        <h1>Create a Request</h1>
+        <h1 className="lang">Create a Request</h1>
 
         <form noValidate onSubmit={this.onSubmit} className="request form" encType="multipart/form-data">
           <div className="card-box">
-            <h4>Professional Information</h4>
+            <h4 className="lang">Professional Information</h4>
             <div className="row form-group">
 
-              <label className="form-label col-md-12">What Service do you Required?<span>*</span></label>
+              <label className="form-label col-md-12 lang">What Service do you Required?</label>
 
               <div className="form-check col-md-12 form-check-radio">
                 <div className='check-box'>
@@ -205,14 +205,14 @@ class Request extends Component {
             <div className="row">
               
               <div className="form-group col-md-12">
-                <label className="form-label">Explain in Brief What You Needs To Be Repaired?<span>*</span></label>
+                <label className="form-label lang">Explain in Brief What You Needs To Be Repaired?</label>
                 <textarea className="form-control" name="repair_explanation" placeholder="Type here" value={this.state.repair_explanation} onChange={this.onChange}></textarea>
               </div>
             </div>
             
             <div className="row form-group">
 
-              <label className="form-label col-md-12">Do you Need the Repair Immediately?<span>*</span></label>
+              <label className="form-label col-md-12 lang">Do you Need the Repair Immediately?</label>
 
               <div className="form-check col-md-12 form-check-radio">
                 <div className='check-box'>
@@ -226,29 +226,29 @@ class Request extends Component {
             
           </div>
           <div className="card-box">
-            <h4>Address</h4>
+            <h4 className="lang">Address</h4>
 
             <div className="row">
               <div className="col-md-12 form-group">
-                <label className="form-label">Address 1</label>
+                <label className="form-label lang">Address 1</label>
                 <input className="form-control" type="text" name="address_1" placeholder="Type Address 1" value={this.state.address_1} onChange={this.onChange} />
               </div>
             </div>
             <div className="row">
               <div className="col-md-12 form-group">
-                <label className="form-label">Address 2</label>
+                <label className="form-label lang">Address 2</label>
                 <input className="form-control" type="text" name="address_2" placeholder="Type Address 2" value={this.state.address_2} onChange={this.onChange} />
               </div>
             </div>
             <div className="row">
               <div className="col-md-6 form-group">
-                <label className="form-label">Country<span>*</span></label>
+                <label className="form-label lang">Country</label>
                 <select className="form-control" name="country"  >
                   <option value={this.state.country} onChange={this.onChangeCountry}>Canada</option>
                 </select>
               </div>
               <div className="col-md-6 form-group">
-                <label className="form-label">Province<span>*</span></label>
+                <label className="form-label lang">Province</label>
                 <select className="form-control" name="state_or_province" value={this.state.state_or_province} onChange={this.onChange} >
                 <option value="Alberta" onChange={this.onChange} defaultSelected={this.state.name === "Alberta"}>Alberta</option>
 	<option value="British Columbia" onChange={this.onChange} defaultSelected={this.state.name === "British Columbia"}>British Columbia</option>
@@ -268,11 +268,11 @@ class Request extends Component {
             </div>
             <div className="row">
               <div className="col-md-6 form-group">
-                <label className="form-label">City<span>*</span></label>
+                <label className="form-label lang">City</label>
                 <input className="form-control" type="text" name="city" placeholder="Type Here" value={this.state.city} onChange={this.onChange} />
               </div>
               <div className="col-md-6 form-group">
-                <label className="form-label">Postal Code<span>*</span></label>
+                <label className="form-label lang">Postal Code</label>
                 <input className="form-control" type="text" name="zipcode" placeholder="Type Here" value={this.state.zipcode} onChange={this.onChange} />
               </div>
             </div>

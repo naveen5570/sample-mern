@@ -83,8 +83,8 @@ class WaitingForApproval extends Component {
         <div className='col-md-10 menu-right'>
         <div className="dashboard-right thanks_msg">
         <div className="content-left">
-                <h3>Registration Successful!</h3>
-<h5>Your Registration is completed successfully. Please wait for the admin to approve your registration.</h5>
+                <h3 className="lang">Registration Successful!</h3>
+<h5 className="lang">Your Registration is completed successfully. Please wait for the admin to approve your registration.</h5>
 
           </div></div>
           

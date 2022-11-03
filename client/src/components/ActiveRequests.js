@@ -73,13 +73,13 @@ class ActiveRequests extends Component {
       <div className="col-md-2 dash_menu">
         <div className="left_menu">
         <ul><li><a>Dashboard </a></li>
-            <li><Link to='/create-request'>Create Request</Link></li>
-            <li className='active_dash'><Link to='/pending-requests'>Pending Requests</Link></li>
-            <li className='active_dash'><Link to='/user-active-requests'>Active Requests</Link></li>
+            <li><Link to='/create-request' className="lang">Create Request</Link></li>
+            <li className='active_dash'><Link to='/pending-requests' className="lang">Pending Requests</Link></li>
+            <li className='active_dash'><Link to='/user-active-requests' className="lang">Active Requests</Link></li>
             
             <li><a>Closed Requests</a></li>
-            <li ><Link to='/request-applications-list'>Request Applications</Link></li>
-            <li><Link to='/user-logout'>Logout</Link></li>
+            <li ><Link to='/request-applications-list' className="lang">Request Applications</Link></li>
+            <li><Link to='/user-logout' className="lang">Logout</Link></li>
         </ul>
         </div>
         </div>

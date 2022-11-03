@@ -4,17 +4,35 @@ const express = require('express');
 const router = express.Router();
 const bcrypt = require('bcrypt');
 const config = require('config');
+const multer = require('multer');
 const jwt = require('jsonwebtoken');
 // Load Book model
 //const Book = require('../../models/Book');
 const Service = require('../../models/Service');
 const auth = require('../../middleware/auth');
 
-// @route GET api/books/test
-// @description tests books route
-// @access Public
+const storage = multer.diskStorage({
+distination:function(req,file,cb){
+  cb(null, 'client/img/services');
+  
+},
+filename:function(req,file,cb){
+  cb(null, uuid.v4()+'-'+Date.now()+path.extname(file.originalname));
+}
+});
 
+const fileFilter = (req,file,cb)=>{
+const allowedFileTypes = ['image/jpeg','image/jpg','image/png'];
+if(allowedFileTypes.includes(file.mimetype)){
+ cb(null,true); 
+}  
+else
+{
+  cb(null,false);
+}
+}
 
+let upload = multer({storage, fileFilter});
 // @route GET api/books
 // @description Get all books
 // @access Public

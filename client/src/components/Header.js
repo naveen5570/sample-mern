@@ -32,14 +32,14 @@ class Header extends Component {
     return (
       <div className="col-md-2 dash_menu">
         <div className="left_menu">
-        <ul><li><Link to="/">Dashboard </Link></li>
-            <li><Link to="/request-list">Open Requests</Link></li>
-            <li><Link to="/applied-requests">Applied Requests</Link></li>
-            <li><Link to="/professional-active-requests">Active Requests</Link></li>
-            <li><Link to="/completed-requests">Completed Requests</Link></li>
-            <li><Link to="/">My Ratings</Link></li>
-            <li><Link to="/view-professional-profile">My Profile</Link></li>
-            <li><Link to="/professional-logout">Logout</Link></li>
+        <ul><li><Link to="/" className="lang">Dashboard </Link></li>
+            <li><Link to="/request-list" className="lang">Open Requests</Link></li>
+            <li><Link to="/applied-requests" className="lang">Applied Requests</Link></li>
+            <li><Link to="/professional-active-requests" className="lang">Active Requests</Link></li>
+            <li><Link to="/completed-requests" className="lang">Completed Requests</Link></li>
+            <li><Link to="/" className="lang">My Ratings</Link></li>
+            <li><Link to="/view-professional-profile" className="lang">My Profile</Link></li>
+            <li><Link to="/professional-logout" className="lang">Logout</Link></li>
         </ul>
         </div>
         

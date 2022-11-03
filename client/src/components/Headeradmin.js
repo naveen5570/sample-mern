@@ -30,21 +30,23 @@ class Headeradmin extends Component {
     }
 */
     return (
+      <>
+      
       <div className="col-md-2 dash_menu">
         <div className="left_menu">
-        <ul><li><Link to="/admin">Dashboard </Link></li>
-            <li><Link to="/admin/professionals-list">Professionals List</Link></li>
-            <li><Link to="/admin/user-list">Users List</Link></li>
-            <li><Link to="/admin/request-list">Request List</Link></li>
-            <li><Link to="/admin/service-list">Service List</Link></li>
-            <li><Link to="/admin/home">Home</Link></li>
-            <li><Link to="/admin/phome">Professional Page</Link></li>
-            <li><Link to="/admin/logout">Logout</Link></li>
+        <ul><li className="lang"><Link to="/admin">Dashboard </Link></li>
+            <li className="lang"><Link to="/admin/professionals-list">Professionals List</Link></li>
+            <li className="lang"><Link to="/admin/user-list">Users List</Link></li>
+            <li className="lang"><Link to="/admin/request-list">Request List</Link></li>
+            <li className="lang"><Link to="/admin/service-list">Service List</Link></li>
+            <li className="lang"><Link to="/admin/home">Home</Link></li>
+            <li className="lang"><Link to="/admin/phome">Professional Page</Link></li>
+            <li className="lang"><Link to="/admin/logout">Logout</Link></li>
         </ul>
         </div>
         
         </div>
-        
+        </>
         
     );
   }

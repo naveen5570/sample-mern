@@ -74,13 +74,13 @@ class ViewRequest extends Component {
       
       <div className="col-md-2 dash_menu">
         <div className="left_menu">
-        <ul><li><a>Dashboard </a></li>
-            <li><Link to='/create-request'>Create Request</Link></li>
-            <li><Link to='/pending-requests'>Pending Requests</Link></li>
-            <li className='active_dash'><Link to='/user-active-requests'>Active Requests</Link></li>
-            <li><a>Closed Requests</a></li>
-            <li><Link to='/request-application-list'>Request Applications</Link></li>
-            <li><a>Logout</a></li>
+        <ul><li><a className="lang">Dashboard </a></li>
+            <li><Link to='/create-request' className="lang">Create Request</Link></li>
+            <li><Link to='/pending-requests' className="lang">Pending Requests</Link></li>
+            <li className='active_dash'><Link to='/user-active-requests' className="lang">Active Requests</Link></li>
+            <li><a className="lang">Closed Requests</a></li>
+            <li><Link to='/request-application-list' className="lang">Request Applications</Link></li>
+            <li><a className="lang">Logout</a></li>
         </ul>
         </div>
         </div>
@@ -88,13 +88,13 @@ class ViewRequest extends Component {
 		<div className='col-md-10 menu-right'>
       <div className="dashboard-right ">
     <div className="dashboard-cart">
-        <h2 className="page-title">{applications.repair_explanation}</h2>
+        <h2 className="page-title lang">{applications.repair_explanation}</h2>
 <div className="row">
-  <div className="col-md-8 border-right"><h2>Task Description</h2><p>{applications.repair_explanation}</p></div>
+  <div className="col-md-8 border-right"><h2 className="lang">Task Description</h2><p className="lang">{applications.repair_explanation}</p></div>
   <div className="col-md-4">
-  <h2>Job Location</h2>
-  <p>Address: {applications.address_1} {applications.address_2}</p>
-  <p>Zipcode: {applications.zipcode}</p> </div>
+  <h2 className="lang">Job Location</h2>
+  <p className="lang">Address: {applications.address_1} {applications.address_2}</p>
+  <p className="lang">Zipcode: {applications.zipcode}</p> </div>
   </div>
         
     </div>

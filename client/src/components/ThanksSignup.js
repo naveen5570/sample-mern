@@ -65,20 +65,20 @@ class ThanksSignup extends Component {
       
         </div>
         <div className="col-md-6">
-          <ul><li><Link to="/register-as-professional">Register As Professional</Link></li><li><Link to="/login">Sign In</Link></li><li><Link to="/" className='button-nav'>Sign Up</Link></li></ul>
+          <ul><li><Link to="/register-as-professional" className="lang">Register As Professional</Link></li><li><Link to="/login" className="lang">Sign In</Link></li><li><Link to="/" className='button-nav lang'>Sign Up</Link></li></ul>
         </div>
       </div>
       </div>
       </div>
       
-      <div className='col-md-12 banner-header'><h1>Lorem Ipsum</h1></div>
+      <div className='col-md-12 banner-header'><h1 className="lang">Lorem Ipsum</h1></div>
       <div className="middle-section">
         <div className="middle_thanks">
         <div className="row">
           <div className="col-md-12">
             <div className="content-left">
-                <h3>Your Sign up is Successful!</h3>
-<h5>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.<br/><br/><Link className="button-nav" to="/login">LOGIN</Link></h5>
+                <h3 className="lang">Your Sign up is Successful!</h3>
+<h5 className="lang">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.<br/><br/><Link className="button-nav" to="/login">LOGIN</Link></h5>
 
           </div></div>
           

@@ -185,53 +185,53 @@ class UpdateProfessionalProfile extends Component {
         <Header/>
 		<div className='col-md-10 menu-right'>
       <div className="dashboard-right">
-        <h1>Edit Your Profile</h1>
+        <h1 className="lang">Edit Your Profile</h1>
 
         <form noValidate onSubmit={this.onSubmit} className="profile form" encType="multipart/form-data">
           <div className="card-box">
-            <h4>Basic Information</h4>
+            <h4 className="lang">Basic Information</h4>
             <div className="row">
               <div className="form-group col-md-6">
-                <label className="form-label">What's Your Name</label>
+                <label className="form-label lang">What's Your Name</label>
                 <input className="form-control" type="text" name="name" placeholder="Name" value={this.state.name} onChange={this.onChange} />
               </div>
               <div className="form-group col-md-6">
-                <label className="form-label">Upload your ID proof</label>
+                <label className="form-label lang">Upload your ID proof</label>
                 <input className="form-control" type="file" name="photo_id" placeholder="Name" value={this.state.photo_id} onChange={this.onChange} />
               </div>
             </div>
             <div className="row">
               
               <div className="form-group col-md-12">
-                <label className="form-label">Short description about yourself</label>
+                <label className="form-label lang">Short description about yourself</label>
                 <textarea className="form-control" name="description" placeholder="Type description here" value={this.state.description} onChange={this.onChange}>{this.state.description}</textarea>
               </div>
             </div>
           </div>
           <div className="card-box">
-            <h4>Address</h4>
+            <h4 className="lang">Address</h4>
 
             <div className="row">
               <div className="col-md-12 form-group">
-                <label className="form-label">Registered Address</label>
+                <label className="form-label lang">Registered Address</label>
                 <input className="form-control" type="text" name="registered_address" placeholder="Type Registered Address" value={this.state.registered_address} onChange={this.onChange} />
               </div>
             </div>
             <div className="row">
               <div className="col-md-12 form-group">
-                <label className="form-label">Office Address</label>
+                <label className="form-label lang">Office Address</label>
                 <input className="form-control" type="text" name="office_address" placeholder="Type Office Address" value={this.state.office_address} onChange={this.onChange} />
               </div>
             </div>
             <div className="row">
               <div className="col-md-6 form-group">
-                <label className="form-label">Country<span>*</span></label>
+                <label className="form-label lang">Country</label>
                 <select className="form-control" name="country" value={this.state.country} onChange={this.onChange} >
                   <option value="Canada">Canada</option>
                 </select>
               </div>
               <div className="col-md-6 form-group">
-                <label className="form-label">Province<span>*</span></label>
+                <label className="form-label lang">Province</label>
                 <select className="form-control" name="state_or_province" value={this.state.state_or_province} onChange={this.onChange} >
                 <option value="Alberta">Alberta</option>
 	<option value="British Columbia">British Columbia</option>
@@ -251,20 +251,20 @@ class UpdateProfessionalProfile extends Component {
             </div>
             <div className="row">
               <div className="col-md-4 form-group">
-                <label className="form-label">City<span>*</span></label>
+                <label className="form-label lang">City</label>
                 <input className="form-control" type="text" name="city" placeholder="Type Here" value={this.state.city} onChange={this.onChange} />
               </div>
               <div className="col-md-4 form-group">
-                <label className="form-label">Postal Code<span>*</span></label>
+                <label className="form-label lang">Postal Code</label>
                 <input className="form-control" type="text" name="zipcode" placeholder="Type Here" value={this.state.zipcode} onChange={this.onChange} />
               </div>
               <div className="col-md-2 form-group">
               
-                <label className="form-label">Available From</label>
+                <label className="form-label lang">Available From</label>
                 <input className="form-control" type="time" name="availability_hours1" onChange={this.onChange} />
                 </div>
                 <div className="col-md-2 form-group">
-                <label className="form-label">To</label>
+                <label className="form-label lang">To</label>
                 <input className="form-control" type="time" name="availability_hours2" onChange={this.onChange} />
               </div>
               
@@ -272,11 +272,11 @@ class UpdateProfessionalProfile extends Component {
             
           </div>
           <div className="card-box">
-            <h4>Professional Information</h4>
+            <h4 className="lang">Professional Information</h4>
 
             <div className="row form-group">
 
-              <label className="form-label col-md-12">Choose your specialisation<span>*</span></label>
+              <label className="form-label col-md-12 lang">Choose your specialisation</label>
 
               <div className="form-check col-md-4">
                 <div className='check-box'>
@@ -324,7 +324,7 @@ class UpdateProfessionalProfile extends Component {
 
             <div className="row">
               <div className="col-md-6 form-group">
-                <label className="form-label">Experience<span>*</span></label>
+                <label className="form-label lang">Experience</label>
                 <select className="form-control" name="experience" value={this.state.experience} onChange={this.onChange} >
                   <option value="">Choose Experience (in years)</option>
                   <option value="5">5</option>
@@ -334,7 +334,7 @@ class UpdateProfessionalProfile extends Component {
                 </select>
               </div>
               <div className="col-md-6 form-group">
-                <label className="form-label">Qualification<span>*</span></label>
+                <label className="form-label lang">Qualification</label>
                 <select className="form-control" name="qualification" value={this.state.qualification} onChange={this.onChange} >
                   <option value="">Qualification</option>
                   <option value="Graduate">Graduate</option>
@@ -344,17 +344,17 @@ class UpdateProfessionalProfile extends Component {
             </div>
             <div className="row">
               <div className="col-md-6 form-group">
-                <label className="form-label">Standard fees<span>*</span></label>
+                <label className="form-label lang">Standard fees</label>
                 <input className="form-control" type="text" name="standard_fees" placeholder="$0.00" value={this.state.standard_fees} onChange={this.onChange} />
               </div>
               <div className="form-group col-md-6">
-                <label className="form-label">Upload your Professional card</label>
+                <label className="form-label lang">Upload your Professional card</label>
                 <input className="form-control" type="file" name="professional_card" placeholder="Name" value={this.state.professional_card} onChange={this.onChange} />
               </div>
             </div>
             <div className="row">
               <div className="col-md-6 form-group">
-                <label className="form-label">Please select radius which you can cater to<span>*</span></label>
+                <label className="form-label lang">Please select radius which you can cater to</label>
                 <input className="form-control" type="text" name="radius_to_cater" placeholder="Radius in kms" value={this.state.radius_to_cater} onChange={this.onChange} />
               </div>
               </div>

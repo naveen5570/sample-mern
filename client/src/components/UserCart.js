@@ -104,42 +104,42 @@ class ProfessionalApplyRequestForm extends Component {
       <div className='row'>
       <div className="col-md-2 dash_menu">
         <div className="left_menu">
-        <ul><li><a>Dashboard </a></li>
-            <li><Link to='/create-request'>Create Request</Link></li>
-            <li><Link to='/pending-requests'>Pending Requests</Link></li>
-            <li className='active_dash'><Link to='/user-active-requests'>Active Requests</Link></li>
+        <ul><li><a className="lang">Dashboard </a></li>
+            <li><Link to='/create-request' className="lang">Create Request</Link></li>
+            <li><Link to='/pending-requests' className="lang">Pending Requests</Link></li>
+            <li className='active_dash'><Link to='/user-active-requests' className="lang">Active Requests</Link></li>
             
             <li><a>Closed Requests</a></li>
-            <li><Link to='/request-applications-list'>Request Applications</Link></li>
-            <li><Link to='/user-logout'>Logout</Link></li>
+            <li><Link to='/request-applications-list' className="lang">Request Applications</Link></li>
+            <li><Link to='/user-logout' className="lang">Logout</Link></li>
         </ul>
         </div>
         </div>
 		<div className='col-md-10 menu-right'>
       <div className="dashboard-right ">
     <div className="dashboard-cart">
-        <h2 className="page-title">Plumber</h2>
-<div className="row"><div className="col-md-6 with_border_right"><h4>Pay Using</h4><p><Stripe  stripeKey="pk_test_51KqNoBEsO5lD4LSjMb0558uN5fHcBYw3ANIGpkRx25OOVgRdWffTxNlZTzsvV7PH4ikP18rTuZ8jPQoeeEv2r7oW00MOseB3Be" token={tokenHandler}  /></p></div><div className="col-md-6">
-    <h4>Booking Summary</h4>
-    <p className="cart-content">Service Type: {applications.map((application) => (
-        <span>{application.appdetails.map((appdetail) => (<span>{appdetail.repair_explanation}</span>))}</span>
+        <h2 className="page-title lang">Plumber</h2>
+<div className="row"><div className="col-md-6 with_border_right"><h4 className="lang">Pay Using</h4><p><Stripe  stripeKey="pk_test_51KqNoBEsO5lD4LSjMb0558uN5fHcBYw3ANIGpkRx25OOVgRdWffTxNlZTzsvV7PH4ikP18rTuZ8jPQoeeEv2r7oW00MOseB3Be" token={tokenHandler}  /></p></div><div className="col-md-6">
+    <h4 className="lang">Booking Summary</h4>
+    <p className="cart-content"><span className="lang">Service Type:</span> {applications.map((application) => (
+        <span>{application.appdetails.map((appdetail) => (<span className="lang">{appdetail.repair_explanation}</span>))}</span>
       ))}</p>
-    <p className="cart-content">Estimated Service time: {applications.map((application) => (
-        <span>{application.time_of_service} hrs</span>
+    <p className="cart-content"><span className="lang">Estimated Service time:</span> {applications.map((application) => (
+        <span className="lang">{application.time_of_service} hrs</span>
       ))}</p>
-    <p className="cart-content">Professional Name: {applications.map((application) => (
-        <span>{application.professionaldetails.map((professionaldetail) => (<span>{professionaldetail.name}</span>))}</span>
+    <p className="cart-content"><span className="lang">Professional Name:</span> {applications.map((application) => (
+        <span>{application.professionaldetails.map((professionaldetail) => (<span className="lang">{professionaldetail.name}</span>))}</span>
       ))}</p>
-    <p className="cart-content">Visitation Fee: {applications.map((application) => (
-        <span>${application.fees}</span>
+    <p className="cart-content"><span className="lang">Visitation Fee:</span> {applications.map((application) => (
+        <span className="lang">${application.fees}</span>
       ))}</p>
-    <p className="cart-content">Total Service Amount: {applications.map((application) => (
-        <span>${application.fees}</span>
+    <p className="cart-content"><span className="lang">Total Service Amount:</span> {applications.map((application) => (
+        <span className="lang">${application.fees}</span>
       ))}</p>
-    <p className="cart-content">Amount Payable: {applications.map((application) => (
-        <span>${application.fees}</span>
+    <p className="cart-content"><span className="lang">Amount Payable:</span> {applications.map((application) => (
+        <span className="lang">${application.fees}</span>
       ))}</p>
-    <p className="terms">By Proceeding you accept our T&C, privacy and cancellation policy</p>
+    <p className="terms lang">By Proceeding you accept our T&C, privacy and cancellation policy</p>
     </div></div>
         
     </div>

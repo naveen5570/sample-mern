@@ -57,12 +57,12 @@ axios
           <>
           <form noValidate onSubmit={this.onSubmit}>
           <div className="card-box">
-            <h4>Basic Information</h4>
+            <h4 className="lang">Basic Information</h4>
             
             <div className="row">
               
               <div className="form-group col-md-12">
-                <label className="form-label">Reason For Disapproval</label>
+                <label className="form-label lang">Reason For Disapproval</label>
                 <textarea className="form-control" name="reason" placeholder="Type Reason here" value={this.state.reason} onChange={this.onChange}></textarea>
                 <input type="hidden" name="id" value=''/><br/>
                 <input className="form-control button-nav" name="submit" value="Disapprove" type="submit" />

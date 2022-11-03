@@ -150,7 +150,7 @@ class Professional extends Component {
         <Header/>
 		<div className='col-md-10 menu-right'>
       <div className="dashboard-right">
-        <h1>Create Your Profile</h1>
+        <h1 className="lang">Create Your Profile</h1>
 
         <form noValidate onSubmit={this.onSubmit} className="profile form" encType="multipart/form-data">
           <div className="card-box">

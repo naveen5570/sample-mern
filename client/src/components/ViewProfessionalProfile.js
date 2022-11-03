@@ -84,24 +84,24 @@ class ViewProfessionalProfile extends Component {
       
         <div className="dashboard-right ">
     <div className="dashboard-cart">
-        <h2 className="page-title">Profile</h2>
+        <h2 className="page-title lang">Profile</h2>
         <div className="row">
   <div className="col-md-8">
     <h4><img src="../img/profile-img.jpg" width="80"/>{reqqs.name}</h4>
-    <h4>About me</h4>
-    <p>{reqqs.description}</p>
-    <h4>Professional Information</h4>
-    <p><strong>Email:</strong> {reqqs.email}</p>
-    <p><strong>Experience:</strong> {reqqs.experience} years</p>
-    <p><strong>Standard Fees:</strong> {reqqs.standard_fees}</p>
+    <h4 className="lang">About me</h4>
+    <p className="lang">{reqqs.description}</p>
+    <h4 className="lang">Professional Information</h4>
+    <p><strong className="lang">Email:</strong> <span className="lang">{reqqs.email}</span></p>
+    <p><strong className="lang">Experience:</strong> <span className="lang">{reqqs.experience} years</span></p>
+    <p><strong className="lang">Standard Fees:</strong> <span className="lang">{reqqs.standard_fees}</span></p>
     </div>
     <div className="col-md-4 profile_right">
-    <h4>Basic Information</h4>
-      <p><strong>Office Address:</strong> {reqqs.office_address}</p>
-      <p><strong>Radius to Cater:</strong> {reqqs.radius_to_cater}</p>
-      <p><strong>Registered Address:</strong> {reqqs.registered_address}</p>
-      <p><strong>Zipcode:</strong> {reqqs.zipcode}</p>
-      <p><strong>City:</strong> {reqqs.city}</p></div>
+    <h4 className="lang">Basic Information</h4>
+      <p><strong className="lang">Office Address:</strong><span className="lang">{reqqs.office_address}</span></p>
+      <p><strong className="lang">Radius to Cater:</strong><span className="lang">{reqqs.radius_to_cater}</span></p>
+      <p><strong className="lang">Registered Address:</strong><span className="lang">{reqqs.registered_address}</span></p>
+      <p><strong className="lang">Zipcode:</strong> <span className="lang">{reqqs.zipcode}</span></p>
+      <p><strong className="lang">City:</strong> <span className="lang">{reqqs.city}</span></p></div>
       
   </div>
         

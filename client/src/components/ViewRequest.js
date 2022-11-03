@@ -77,14 +77,14 @@ class ViewRequest extends Component {
 		<div className='col-md-10 menu-right'>
       <div className="dashboard-right ">
     <div className="dashboard-cart">
-        <h2 className="page-title">{applications.repair_explanation}</h2>
+        <h2 className="page-title lang">{applications.repair_explanation}</h2>
 <div className="row">
-  <div className="col-md-8 border-right"><h2>Task Description</h2><p>{applications.repair_explanation}</p></div>
+  <div className="col-md-8 border-right"><h2 className="lang">Task Description</h2><p className="lang">{applications.repair_explanation}</p></div>
   <div className="col-md-4">
-  <h2>Job Location</h2>
-  <p>Address: {applications.address_1} {applications.address_2}</p>
-  <p>Zipcode: {applications.zipcode}</p> </div>
-  <div className="col-md-12 "><Link className="btn btn-info " to={'/request-apply/'+applications._id}>Apply</Link></div>
+  <h2 className="lang">Job Location</h2>
+  <p className="lang">Address: {applications.address_1} {applications.address_2}</p>
+  <p className="lang">Zipcode: {applications.zipcode}</p> </div>
+  <div className="col-md-12 "><Link className="btn btn-info lang" to={'/request-apply/'+applications._id}>Apply</Link></div>
   </div>
         
     </div>

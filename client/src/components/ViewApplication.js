@@ -73,13 +73,13 @@ class ViewApplication extends Component {
       <div className='row'>
       <div className="col-md-2 dash_menu">
         <div className="left_menu">
-        <ul><li><a>Dashboard </a></li>
-            <li><Link to='/create-request'>Create Request</Link></li>
-            <li><a>Pending Requests</a></li>
-            <li><a >Active Requests</a></li>
+        <ul><li><a className="lang">Dashboard </a></li>
+            <li><Link to='/create-request' className="lang">Create Request</Link></li>
+            <li><a className="lang">Pending Requests</a></li>
+            <li><a className="lang">Active Requests</a></li>
             
             <li><a>Closed Requests</a></li>
-            <li><Link to='/request-applications-list'>Request Applications</Link></li>
+            <li><Link to='/request-applications-list lang'>Request Applications</Link></li>
             <li><a>Logout</a></li>
         </ul>
         </div>
@@ -89,17 +89,17 @@ class ViewApplication extends Component {
       <div className="dashboard-right ">
     <div className="dashboard-cart">
         <h2 className="page-title">{applications.map((application) => (
-        <span>{application.appdetails.map((appdetail) => (<span>{appdetail.repair_explanation}</span>))}</span>
+        <span>{application.appdetails.map((appdetail) => (<span className="lang">{appdetail.repair_explanation}</span>))}</span>
       ))}</h2>
 <div className="row">
   <div className="col-md-12 ">{applications.map((application) => (
-        <span><strong>Estimated Time of Service:</strong> {application.time_of_service} hrs</span>
+        <span><strong className="lang">Estimated Time of Service:</strong> <span className="lang">{application.time_of_service} hrs</span></span>
       ))}</div>
       <div className="col-md-12 ">{applications.map((application) => (
-        <span><strong>Fees:</strong> ${application.fees}</span>
+        <span><strong className="lang">Fees:</strong> $<span className="lang">{application.fees}</span></span>
       ))}</div>
       <div className="col-md-12 ">{applications.map((application) => (
-        <Link className="btn btn-info btn-right" to={'/hire/'+application._id}>Hire</Link>
+        <Link className="btn btn-info btn-right lang" to={'/hire/'+application._id}>Hire</Link>
       ))}</div>
   </div>
         

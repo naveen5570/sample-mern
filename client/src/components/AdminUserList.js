@@ -5,6 +5,7 @@ import { Link, Redirect } from 'react-router-dom';
 import jwtDecode from 'jwt-decode';
 import ReqCard from './UserCard';
 import Header from './Headeradmin';
+import Headertop from './Headeradmintop';
 
 class AdminUserList extends Component {
   constructor(props) {
@@ -52,23 +53,7 @@ class AdminUserList extends Component {
 
     return (
       <div>
-<div className="dashboard-top-header">
-      <div className="container-fluid">
-      <div className="row">
-        <div className="col-md-2">
-          
-        <Link to='/' ><img src="../img/logo.jpg"/></Link>
-        </div>
-        <div className="col-md-7">
-      
-        </div>
-        <div className="col-md-3">
-          
-        </div>
-      </div>
-      </div>
-      
-      </div>
+<Headertop/>
       <div className="container-fluid">
       <div className='row'>
         <Header />
@@ -79,13 +64,13 @@ class AdminUserList extends Component {
           <br/><br/>
 
           <div className="list">
-          <h1 className="page-title">All Users</h1>
+          <h1 className="page-title lang">All Users</h1>
           <div className="card-container1 col-md-12">
           
            <div className="desc list_container">
             
           <table>
-                    <tr><th>Name</th><th>Email</th><th>Registered On</th><th>Action</th></tr>
+                    <tr><th className="lang">Name</th><th className="lang">Email</th><th className="lang">Registered On</th><th className="lang">Action</th></tr>
              {reqList}
              </table>
              </div>

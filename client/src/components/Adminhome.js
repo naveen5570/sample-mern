@@ -4,6 +4,7 @@ import axios from 'axios';
 import { Link } from 'react-router-dom';
 import jwtDecode from 'jwt-decode';
 import Header from './Headeradmin';
+import Headertop from './Headeradmintop';
 
 class Adminhome extends Component {
   constructor(props) {
@@ -31,6 +32,12 @@ class Adminhome extends Component {
   }
 
   componentDidMount() {
+    const token = localStorage.getItem("lang");
+    if(token=='fr')
+    {
+      window.location.href = '/admin/frhome'; 
+    }
+
     axios
       .get('/api/pages')
       .then(res => {
@@ -122,97 +129,82 @@ class Adminhome extends Component {
     return (
 
 <div>
-      <div className="dashboard-top-header">
-      <div className="container-fluid">
-      <div className="row">
-        <div className="col-md-2">
-          
-        <Link to='/'><img src="../img/logo.jpg" alt="logo"/></Link>
-        </div>
-        <div className="col-md-7">
-      
-        </div>
-        <div className="col-md-3">
-          
-        </div>
-      </div>
-      </div>
-      </div>
+      <Headertop/>
 	  <div className='container-fluid'>
       <div className='row'>
       
         <Header/>
 		<div className='col-md-10 menu-right'>
       <div className="dashboard-right">
-        <h1>Update Home Page Details</h1>
+        <h1 className="lang">Update Home Page Details</h1>
 
         <form noValidate onSubmit={this.onSubmit} className="profile form" encType="multipart/form-data">
           <div className="card-box">
-            <h4>Banner Section</h4>
+            <h4 className="lang">Banner Section</h4>
             <div className="row">
               <div className="form-group col-md-6">
-                <label className="form-label">Banner Area First Heading</label>
+                <label className="form-label lang">Banner Area First Heading</label>
                 <input className="form-control" type="text" name="banner_h1" placeholder="Name" value={this.state.banner_h1} onChange={this.onChange} />
               </div>
               <div className="form-group col-md-6">
-              <label className="form-label">Banner Area Second Heading</label>
+              <label className="form-label lang">Banner Area Second Heading</label>
                 <input className="form-control" type="text" name="banner_h2" placeholder="Name" value={this.state.banner_h2} onChange={this.onChange} />
               </div>
             </div>
             <div className="row">
               
               <div className="form-group col-md-12">
-              <label className="form-label">Banner Area Third Heading</label>
+              <label className="form-label lang">Banner Area Third Heading</label>
                 <input className="form-control" type="text" name="banner_h3" placeholder="Name" value={this.state.banner_h3} onChange={this.onChange} />
               </div>
               <div className="form-group col-md-6">
-              <label className="form-label">Banner Area Get Started Link</label>
+              <label className="form-label lang">Banner Area Get Started Link</label>
                 <input className="form-control" type="text" name="banner_link" placeholder="Name" value={this.state.banner_link} onChange={this.onChange} />
               </div>
             </div>
           </div>
           <div className="card-box">
-            <h4>How We Work Section</h4>
+            <h4 className="lang">How We Work Section</h4>
 
             <div className="row">
               <div className="col-md-12 form-group">
-                <label className="form-label">Main Heading</label>
+                <label className="form-label lang">Main Heading</label>
                 <input className="form-control" type="text" name="how_heading" placeholder="Type Registered Address" value={this.state.how_heading} onChange={this.onChange} />
               </div>
             </div>
             <div className="row">
               <div className="col-md-12 form-group">
-                <label className="form-label">Description</label>
+                <label className="form-label lang">Description</label>
                 <textarea className="form-control" name="how_description" placeholder="Type description here" value={this.state.how_description} onChange={this.onChange}></textarea>
               </div>
             </div>
             <div className="row">
               <div className="col-md-6 form-group">
-                <label className="form-label">Box 1 Heading</label>
+                <label className="form-label lang">Box 1 Heading</label>
                 <input className="form-control" type="text" name="how_1_heading" placeholder="Type Registered Address" value={this.state.how_1_heading} onChange={this.onChange} />
               </div>
               <div className="col-md-6 form-group">
-              <label className="form-label">Box 1 Description</label>
+              <label className="form-label lang">Box 1 Description</label>
                 <input className="form-control" type="text" name="how_1_description" placeholder="Type Registered Address" value={this.state.how_1_description} onChange={this.onChange} />
               </div>
             </div>
             <div className="row">
               <div className="col-md-6 form-group">
-                <label className="form-label">Box 2 Heading</label>
+                <label className="form-label lang">Box 2 Heading</label>
                 <input className="form-control" type="text" name="how_2_heading" placeholder="Type Registered Address" value={this.state.how_2_heading} onChange={this.onChange} />
               </div>
               <div className="col-md-6 form-group">
-              <label className="form-label">Box 2 Description</label>
+              <label className="form-label lang">Box 2 Description</label>
                 <input className="form-control" type="text" name="how_2_description" placeholder="Type Registered Address" value={this.state.how_2_description} onChange={this.onChange} />
               </div>
             </div>
             <div className="row">
               <div className="col-md-6 form-group">
-                <label className="form-label">Box 3 Heading</label>
+                <label className="form-label lang">Box 3 Heading</label>
                 <input className="form-control" type="text" name="how_3_heading" placeholder="Type Registered Address" value={this.state.how_3_heading} onChange={this.onChange} />
               </div>
               <div className="col-md-6 form-group">
-              <label className="form-label">Box 3 Description</label>
+              <label className="form-label lang">Box 3 Description</label>
                 <input className="form-control" type="text" name="how_3_description" placeholder="Type Registered Address" value={this.state.how_3_description} onChange={this.onChange} />
               </div>
             </div>
@@ -220,34 +212,34 @@ class Adminhome extends Component {
             
           </div>
           <div className="card-box">
-            <h4>Services Section</h4>
+            <h4 className="lang">Services Section</h4>
 
             
 
             <div className="row">
             <div className="col-md-6 form-group">
-              <label className="form-label">Service Heading</label>
+              <label className="form-label lang">Service Heading</label>
                 <input className="form-control" type="text" name="services_heading" placeholder="Type Registered Address" value={this.state.services_heading} onChange={this.onChange} />
               </div>
               <div className="col-md-6 form-group">
-              <label className="form-label">Service Description</label>
+              <label className="form-label lang">Service Description</label>
               <textarea className="form-control" name="services_description" placeholder="Type description here" value={this.state.services_description} onChange={this.onChange}></textarea>
               </div>
             </div>
             </div>
             <div className="card-box">
-            <h4>Bottom Section</h4>
+            <h4 className="lang">Bottom Section</h4>
             <div className="row">
             <div className="col-md-6 form-group">
-              <label className="form-label">Bottom Section Heading</label>
+              <label className="form-label lang">Bottom Section Heading</label>
                 <input className="form-control" type="text" name="section_1_heading" placeholder="Type Registered Address" value={this.state.section_1_heading} onChange={this.onChange} />
               </div>
               <div className="col-md-6 form-group">
-              <label className="form-label">Bottom Section Description</label>
+              <label className="form-label lang">Bottom Section Description</label>
               <textarea className="form-control" name="section_1_description" placeholder="Type description here" value={this.state.section_1_heading} onChange={this.onChange}></textarea>
               </div>
               <div className="col-md-6 form-group">
-              <label className="form-label">Bottom Section Link</label>
+              <label className="form-label lang">Bottom Section Link</label>
               <input className="form-control" type="text" name="section_1_link" placeholder="Type Registered Address" value={this.state.section_1_link} onChange={this.onChange} />
               </div>
             </div>

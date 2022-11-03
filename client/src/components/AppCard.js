@@ -10,18 +10,18 @@ const ReqCard = (props) => {
            <div className="desc list_container">
                 <h1 className="list_title">
                     <Link to={`/view-professional/${reqq.professionaldetails.map(item => {return item._id})}`}>
-                    {reqq.professionaldetails.map(item => {return <span>{item.name}</span>;})}
+                    {reqq.professionaldetails.map(item => {return <span className="lang">{item.name}</span>;})}
                     
                     </Link>
                     
                 </h1>
-                <p>Time Duration: {reqq.time_of_service}</p>
-                <p>Charges: ${reqq.fees}</p>
-                <Link to={`/hire/${reqq._id}`} className="btn btn-info btn-right">
+                <p className="lang">Time Duration: {reqq.time_of_service}</p>
+                <p className="lang">Charges: ${reqq.fees}</p>
+                <Link to={`/hire/${reqq._id}`} className="btn btn-info btn-right lang">
                         Hire
                     </Link>
                 <span className="btn-right">&nbsp;</span>
-                <Link to={`/view-professional/${reqq.professionaldetails.map(item => {return item._id})}`} className="btn btn-info btn-right">
+                <Link to={`/view-professional/${reqq.professionaldetails.map(item => {return item._id})}`} className="btn btn-info btn-right lang">
                         View
                     </Link>
             </div>
