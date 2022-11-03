@@ -61,10 +61,14 @@ $(document).on('click','.lan',function(){
 //alert($(this).data("id"));
   if($(this).data("id")=='en')
   {
+    //alert(localStorage.getItem("lang"));
+    localStorage.setItem('lang', 'en');
   window.location.href="/";  
   }
   else
   {
+    //alert(localStorage.getItem("lang"));
+    localStorage.setItem('lang', 'fr');
     window.location.href="/fr";
   }
 
