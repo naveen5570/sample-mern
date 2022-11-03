@@ -183,17 +183,18 @@ class Headermain extends Component {
         <div className="col-md-2">
         <Link to='/'><img src="./img/logo.jpg"/></Link>
         </div>
-        <div className="col-md-4  ">
+        <div className="col-md-2  ">
       
         </div>
-        <div className="col-md-6">
-          <ul><li><Link to="/register-as-professional" className="lang">Register As Professional</Link></li><li><Link to="/login" className="lang">Sign In</Link></li><li><Link to="/" className='button-nav lang'>Sign Up</Link></li></ul>
-          <div className="language">
+        <div className="col-md-8">
+        <div className="language main-lan">
           
           <button onClick={this.handleClick}>French</button>
           <button onClick={this.handleClick1}>English</button>
           
         </div>
+          <ul><li><Link to="/register-as-professional" className="lang">Register As Professional</Link></li><li><Link to="/login" className="lang">Sign In</Link></li><li><Link to="/" className='button-nav lang'>Sign Up</Link></li></ul>
+          
         </div>
       </div>
       </div>
