@@ -289,6 +289,6 @@ h3.title { font-size:40px; line-height: 54px;}
 
 .main-lan {float:right; margin-top:20px;}
 
-.language img {width:40px; height:24px;}
+.language img, .lan img {width:40px; height:24px;}
 
-.language button {border:0px; box-shadow:0px 0px 0px 0px; background:transparent}
+.language button, .lan {border:0px; box-shadow:0px 0px 0px 0px; background:transparent}

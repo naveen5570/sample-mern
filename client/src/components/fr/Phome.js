@@ -77,8 +77,8 @@ console.log('this=>'+homes);
           <Link className="nav-link btn btn-info btn-prof" aria-current="page" to="/register">Sign Up</Link>
         </li>
         <li className="nav-item">
-        <button className="en lan" data-id="en">English</button>
-          <button className="fr lan" data-id="fr">French</button>
+        <button className="en lan" data-id="en"><img src='/en.png'/></button>
+          <button className="fr lan" data-id="fr"><img src='/fr.png'/></button>
         </li>
           </ul>
     </div>
