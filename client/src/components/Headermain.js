@@ -193,7 +193,7 @@ class Headermain extends Component {
           
           
         </div>
-          <ul><li><Link to="/register-as-professional" className="lang">Register As Professional</Link></li><li><Link to="/login" className="lang">Sign In</Link></li><li><Link to="/" className='button-nav lang'>Sign Up</Link></li></ul>
+          <ul><li><Link to="/professional" className="lang">Register As Professional</Link></li><li><Link to="/login-as-professional" className="lang">Professional Login</Link></li><li><Link to="/login" className="lang">Sign In</Link></li><li><Link to="/" className='button-nav lang'>Sign Up</Link></li></ul>
           
         </div>
       </div>

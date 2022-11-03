@@ -68,13 +68,14 @@ console.log('this=>'+homes);
       </ul>
       <ul className="nav navbar-nav navbar-right">
             <li className="nav-item">
-          <Link className="nav-link" aria-current="page" to="/register-as-professional">Register As A Professional</Link>
+          <Link className="nav-link lang" aria-current="page" to="/professional">Register As A Professional</Link>
         </li>
+        <li className="nav-item"><Link to="/login-as-professional" className="lang nav-link">Professional Login</Link></li>
         <li className="nav-item">
-          <Link className="nav-link" to="/login">Sign In</Link>
+          <Link className="nav-link lang" to="/login">Sign In</Link>
         </li>
 		  <li className="nav-item">
-          <Link className="nav-link btn btn-info" aria-current="page" to="/register">Sign Up</Link>
+          <Link className="nav-link btn btn-info lang" aria-current="page" to="/register">Sign Up</Link>
         </li>
         <li className="nav-item">
           <button className="en lan" data-id="en"><img src='/en.png'/></button>

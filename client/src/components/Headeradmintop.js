@@ -84,7 +84,18 @@ changeLang=()=>{
 
   handleClick() 
   {   
-    //alert('fr'); 
+    //alert(window.location.href); 
+    if(window.location.href=="https://sample-mer.herokuapp.com/admin/phome")
+    {
+      //alert("ttt");
+      window.location.href = "/admin/frphome";
+    }
+    else if(window.location.href=="https://sample-mer.herokuapp.com/admin/home")
+    {
+      window.location.href = "/admin/frhome";
+    }
+    
+
     document.getElementById("loader-container").style.display = "block";
     localStorage.setItem('lang', 'fr');
    // Translate API 
@@ -116,7 +127,16 @@ setTimeout(function(){document.getElementById('loader-container').style.display=
 
 
   handleClick1() 
-  {    
+  {   
+    if(window.location.href=="https://sample-mer.herokuapp.com/admin/frhome")
+    {
+      window.location.href = "/admin/home";
+    }
+    else if(window.location.href=="https://sample-mer.herokuapp.com/admin/frphome")
+    {
+      //alert("ttt");
+      window.location.href = "/admin/phome";
+    } 
     document.getElementById("loader-container").style.display = "block";
     localStorage.setItem('lang', 'en');
     //alert('ttt');

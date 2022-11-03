@@ -67,9 +67,10 @@ console.log('this=>'+homes);
         
       </ul>
       <ul className="nav navbar-nav navbar-right">
-            <li className="nav-item">
-          <Link className="nav-link" aria-current="page" to="/register-as-professional">Register As A Professional</Link>
+      <li className="nav-item">
+          <Link className="nav-link lang" aria-current="page" to="/fr/professional">Register As A Professional</Link>
         </li>
+        <li className="nav-item"><Link  to="/login-as-professional" className="nav-link lang">Professional Login</Link></li>
         <li className="nav-item">
           <Link className="nav-link" to="/login">Sign In</Link>
         </li>
