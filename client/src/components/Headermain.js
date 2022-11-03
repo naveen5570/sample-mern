@@ -188,9 +188,9 @@ class Headermain extends Component {
         </div>
         <div className="col-md-8">
         <div className="language main-lan">
+        <button onClick={this.handleClick1}><img src='./en.png'/></button>
+          <button onClick={this.handleClick}><img src='./fr.png'/></button>
           
-          <button onClick={this.handleClick}>French</button>
-          <button onClick={this.handleClick1}>English</button>
           
         </div>
           <ul><li><Link to="/register-as-professional" className="lang">Register As Professional</Link></li><li><Link to="/login" className="lang">Sign In</Link></li><li><Link to="/" className='button-nav lang'>Sign Up</Link></li></ul>

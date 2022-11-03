@@ -183,8 +183,8 @@ setTimeout(function(){document.getElementById('loader-container').style.display=
         </div>
         <div className="col-md-3 language">
           
-          <button onClick={this.handleClick}>French</button>
-          <button onClick={this.handleClick1}>English</button>
+        <button onClick={this.handleClick1}><img src='/en.png'/></button>
+          <button onClick={this.handleClick}><img src='/fr.png'/></button>
           
         </div>
       </div>
