@@ -196,7 +196,7 @@ setTimeout(function(){document.getElementById('loader-container').style.display=
       <div className="row">
         <div className="col-md-2">
           
-        <Link to='/'><img src="/img/logo.jpg" alt="logo"/></Link>
+        <Link to='/'><img src="/img/logo-final.png" width="90"/></Link>
         </div>
         <div className="col-md-7">
       

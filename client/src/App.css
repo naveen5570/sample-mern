@@ -167,6 +167,7 @@ a, link {text-decoration: none;}
 
 .dashboard-top-header {background:#18192B; padding:0;}
 .dashboard-top-header .col-md-2 {border-right:1px solid #ddd;}
+.dashboard-top-header .col-md-2 img {width:90px;}
 .left_menu {float:left; background:#fff; height:100%; width: 100%;  border-right:#ddd 1px solid;}
 .left_menu ul {padding-left:0px;}
 .left_menu ul li {list-style: none; display: block; border-bottom:2px solid #ddd; padding:10px 0}
@@ -292,3 +293,5 @@ h3.title { font-size:40px; line-height: 54px;}
 .language img, .lan img {width:40px; height:24px;}
 
 .language button, .lan {border:0px; box-shadow:0px 0px 0px 0px; background:transparent}
+
+.col-md-3.language{margin-top:10px;}
