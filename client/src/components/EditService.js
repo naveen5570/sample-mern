@@ -4,6 +4,7 @@ import axios from 'axios';
 import { Link, useHistory, useParams  } from 'react-router-dom';
 import jwtDecode from 'jwt-decode';
 import Header from './Headeradmin';
+import Headertop from './Headeradmintop';
 
 class EditService extends Component {
   constructor(props) {
@@ -85,22 +86,7 @@ class EditService extends Component {
     return (
 
 <div>
-      <div className="dashboard-top-header">
-      <div className="container-fluid">
-      <div className="row">
-        <div className="col-md-2">
-          
-        <Link to='/'><img src="/img/logo.jpg" alt="logo"/></Link>
-        </div>
-        <div className="col-md-7">
-      
-        </div>
-        <div className="col-md-3">
-          
-        </div>
-      </div>
-      </div>
-      </div>
+      <Headertop/>
 	  <div className='container-fluid'>
       <div className='row'>
       

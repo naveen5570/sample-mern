@@ -85,7 +85,7 @@ class AdminLogin extends Component {
       <div className="container">
       <div className="row">
         <div className="col-md-2">
-        <Link to='/'><img src="./img/logo.jpg"/></Link>
+        <Link to='/'><img src="/img/logo.jpg" width="90"/></Link>
         </div>
         <div className="col-md-4  ">
       

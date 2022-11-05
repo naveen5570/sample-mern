@@ -18,7 +18,7 @@ class AdminViewProfessionalProfile extends Component {
 
   componentDidMount() {
     const params = this.props.params;
-    const token = localStorage.getItem("token");
+    const token = localStorage.getItem("admin_token");
     if(!token)
     {
       window.location.href = "/login";

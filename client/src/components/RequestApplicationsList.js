@@ -4,7 +4,7 @@ import axios from 'axios';
 import { Link } from 'react-router-dom';
 import jwtDecode from 'jwt-decode';
 import ReqCard from './UserReqApplied';
-import Header from './Header';
+import Headertop from './Headeradmintop';
 
 class RequestApplicationsList extends Component {
   constructor(props) {
@@ -51,23 +51,7 @@ class RequestApplicationsList extends Component {
 
     return (
       <div>
-<div className="dashboard-top-header">
-      <div className="container-fluid">
-      <div className="row">
-        <div className="col-md-2">
-          
-        <Link to='/'><img src="./img/logo.jpg"/></Link>
-        </div>
-        <div className="col-md-7">
-      
-        </div>
-        <div className="col-md-3">
-          
-        </div>
-      </div>
-      </div>
-      
-      </div>
+<Headertop/>
       <div className="container-fluid">
       <div className='row'>
       <div className="col-md-2 dash_menu">
@@ -75,7 +59,7 @@ class RequestApplicationsList extends Component {
         <ul><li><a className="lang">Dashboard </a></li>
             <li><Link to='/create-request' className="lang">Create Request</Link></li>
             <li ><Link to='/pending-requests' className="lang">Pending Requests</Link></li>
-            <li className='active_dash'><Link to='/user-active-requests' className="lang">Active Requests</Link></li>
+            <li ><Link to='/user-active-requests' className="lang">Active Requests</Link></li>
             
             <li><a className="lang">Closed Requests</a></li>
             <li className='active_dash'><Link className="lang" to='/request-applications-list'>Request Applications</Link></li>

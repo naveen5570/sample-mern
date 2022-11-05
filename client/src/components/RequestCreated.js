@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import '../App.css';
 import axios, { Axios } from 'axios';
 import { Link } from 'react-router-dom';
+import Headertop from './Headeradmintop';
 
 class RequestCreated extends Component {
   constructor() {
@@ -55,22 +56,7 @@ class RequestCreated extends Component {
 */
     return (
       <div>
-      <div className="dashboard-top-header">
-      <div className="container-fluid">
-      <div className="row">
-        <div className="col-md-2">
-          
-        <Link to='/'><img src="./img/logo.jpg"/></Link>
-        </div>
-        <div className="col-md-7">
-      
-        </div>
-        <div className="col-md-3">
-          
-        </div>
-      </div>
-      </div>
-      </div>
+      <Headertop/>
       
       
       <div className='container-fluid'>

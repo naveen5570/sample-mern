@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import '../App.css';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+import Headermain from './Headermain';
 
 class ForgotPassword extends Component {
   constructor() {
@@ -55,21 +56,7 @@ class ForgotPassword extends Component {
 */
     return (
 	  <div>
-      <div className="top-header">
-      <div className="container">
-      <div className="row">
-        <div className="col-md-2">
-          <img src="./img/logo.jpg"/>
-        </div>
-        <div className="col-md-4  ">
-      
-        </div>
-        <div className="col-md-6">
-          <ul><li><a>Register As Professional</a></li><li><a>Sign In</a></li><li><a className='button-nav'>Sign Up</a></li></ul>
-        </div>
-      </div>
-      </div>
-      </div>
+      <Headermain/>
       <div className='col-md-12 banner-header'><h1>Lorem Ipsum</h1></div>
       <div className="middle-section">
         <div className="middle">

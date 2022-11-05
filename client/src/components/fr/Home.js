@@ -60,7 +60,7 @@ console.log('this=>'+homes);
 <div className="col-md-12">
 <nav className="navbar navbar-expand-lg navbar-light  navbar-fixed-top">
   <div className="container-fluid">
-    <a className="navbar-brand" href="#">Logo</a>
+    <a className="navbar-brand" href="#"><img src="/img/logo-final.png" width="90"/></a>
     
     <div className="collapse navbar-collapse" id="navbarSupportedContent">
       <ul className="navbar-nav me-auto mb-2 mb-lg-0">

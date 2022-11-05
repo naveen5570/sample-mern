@@ -3,6 +3,7 @@ import '../App.css';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import jwtDecode from 'jwt-decode';
+import Headertop from './Headeradmintop';
 
 class Request extends Component {
   constructor() {
@@ -116,22 +117,7 @@ class Request extends Component {
 */
     return (
 <div>
-      <div className="dashboard-top-header">
-      <div className="container-fluid">
-      <div className="row">
-        <div className="col-md-2">
-          
-        <Link to='/'><img src="./img/logo.jpg" alt="t"/></Link>
-        </div>
-        <div className="col-md-7">
-      
-        </div>
-        <div className="col-md-3">
-          
-        </div>
-      </div>
-      </div>
-      </div>
+      <Headertop/>
 	  <div className='container-fluid'>
       <div className='row'>
       
@@ -140,7 +126,7 @@ class Request extends Component {
         <ul><li><a className="lang">Dashboard </a></li>
             <li className='active_dash'><Link className="lang" to='/create-request'>Create Request</Link></li>
             <li><Link to='/pending-requests' className="lang">Pending Requests</Link></li>
-            <li className='active_dash'><Link className="lang" to='/user-active-requests'>Active Requests</Link></li>
+            <li ><Link className="lang" to='/user-active-requests'>Active Requests</Link></li>
             <li><a className="lang">Closed Requests</a></li>
             <li><Link to='/request-applications-list' className="lang">Request Applications</Link></li>
             <li><Link to='/user-logout' className="lang">Logout</Link></li>
