@@ -62,10 +62,10 @@ class UserDashboard extends Component {
         
 <div className="col-md-10 dashboard">
 <div className="row">
-<div className="col-md-3 "><div className=" dash_box dash_box1"><span><img src="./img/img1.png" width="50"/></span><span><h2>25</h2><p>Total Job Invites</p></span></div></div>
-<div className="col-md-3"><div className="dash_box dash_box2"><span><img src="./img/img2.png" width="50"/></span><span><h2>12</h2><p>Total Job Applied</p></span></div></div>
-<div className="col-md-3"><div className="dash_box dash_box3"><span><img src="./img/img3.png" width="50"/></span><span><h2>20</h2><p>Job Application Accepted</p></span></div></div>
-<div className="col-md-3"><div className="dash_box dash_box4"><span><img src="./img/img4.png" width="50"/></span><span><h2>2</h2><p>Job Completed</p></span></div></div>  
+<div className="col-md-3 "><div className=" dash_box dash_box1"><span><img src="./img/img1.png" width="50"/></span><span><h2>25</h2><p>Total Job Invites</p></span><span className="arrow"><img src="./img/arrow-right.png" width="30"/></span></div></div>
+<div className="col-md-3"><div className="dash_box dash_box2"><span><img src="./img/img2.png" width="50"/></span><span><h2>12</h2><p>Total Job Applied</p></span><span className="arrow"><img src="./img/arrow-right.png" width="30"/></span></div></div>
+<div className="col-md-3"><div className="dash_box dash_box3"><span><img src="./img/img3.png" width="50"/></span><span><h2>20</h2><p>Job Application Accepted</p></span><span className="arrow"><img src="./img/arrow-right.png" width="30"/></span></div></div>
+<div className="col-md-3"><div className="dash_box dash_box4"><span><img src="./img/img4.png" width="50"/></span><span><h2>2</h2><p>Job Completed</p></span><span className="arrow"><img src="./img/arrow-right.png" width="30"/></span></div></div>
 </div> 
 <div className="row">
 <div className="col-md-8"><div className="card-box notification_list"><h5>Daily Notification</h5><ul>

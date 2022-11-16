@@ -314,6 +314,8 @@ h3.title { font-size:40px; line-height: 54px;}
 .dash_box span h2 {font-weight:500;}
 .dash_box span img {margin-top:10px; margin-right: 8px;}
 .dashboard .col-md-3 {padding-left:5px; padding-right:5px;}
+.arrow {position: relative;}
+.arrow img{position: absolute; }
 
 
 
