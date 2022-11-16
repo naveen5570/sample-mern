@@ -55,10 +55,10 @@ class UserLogin extends Component {
         localStorage.setItem('p_status',res.data.status);
         localStorage.setItem('d_reason',res.data.d_reason);
         
-        if(res.status==200)
+        if(res.status===200)
         {
           console.log(res.data.city);
-        if(res.data.city!=undefined)
+        if(res.data.city!== undefined)
         {
         window.location.href = "/request-list"; 
         }

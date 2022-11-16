@@ -5,6 +5,7 @@ import { Link, useHistory, useParams } from 'react-router-dom';
 import Header from './Header';
 import Stripe from 'react-stripe-checkout';
 import Headertop from './Headeradmintop';
+import Headeruser from './Headeruser';
 
 class ViewApplication extends Component {
   
@@ -57,19 +58,7 @@ class ViewApplication extends Component {
       <Headertop/>
 	  <div className='container-fluid'>
       <div className='row'>
-      <div className="col-md-2 dash_menu">
-        <div className="left_menu">
-        <ul><li><a className="lang">Dashboard </a></li>
-            <li><Link to='/create-request' className="lang">Create Request</Link></li>
-            <li><a className="lang">Pending Requests</a></li>
-            <li><a className="lang">Active Requests</a></li>
-            
-            <li><a>Closed Requests</a></li>
-            <li><Link to='/request-applications-list lang'>Request Applications</Link></li>
-            <li><a>Logout</a></li>
-        </ul>
-        </div>
-        </div>
+      <Headeruser/>
       
 		<div className='col-md-10 menu-right'>
       <div className="dashboard-right ">

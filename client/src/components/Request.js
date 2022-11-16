@@ -4,6 +4,7 @@ import axios from 'axios';
 import { Link } from 'react-router-dom';
 import jwtDecode from 'jwt-decode';
 import Headertop from './Headeradmintop';
+import Headeruser from './Headeruser';
 
 class Request extends Component {
   constructor() {
@@ -121,18 +122,7 @@ class Request extends Component {
 	  <div className='container-fluid'>
       <div className='row'>
       
-        <div className="col-md-2 dash_menu">
-        <div className="left_menu">
-        <ul><li><a className="lang">Dashboard </a></li>
-            <li className='active_dash'><Link className="lang" to='/create-request'>Create Request</Link></li>
-            <li><Link to='/pending-requests' className="lang">Pending Requests</Link></li>
-            <li ><Link className="lang" to='/user-active-requests'>Active Requests</Link></li>
-            <li><a className="lang">Closed Requests</a></li>
-            <li><Link to='/request-applications-list' className="lang">Request Applications</Link></li>
-            <li><Link to='/user-logout' className="lang">Logout</Link></li>
-        </ul>
-        </div>
-        </div>
+        <Headeruser/>
 		<div className='col-md-10 menu-right'>
       <div className="dashboard-right">
         <h1 className="lang">Create a Request</h1>

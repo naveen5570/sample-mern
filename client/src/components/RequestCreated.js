@@ -3,6 +3,7 @@ import '../App.css';
 import axios, { Axios } from 'axios';
 import { Link } from 'react-router-dom';
 import Headertop from './Headeradmintop';
+import Headeruser from './Headeruser';
 
 class RequestCreated extends Component {
   constructor() {
@@ -62,18 +63,7 @@ class RequestCreated extends Component {
       <div className='container-fluid'>
       <div className='row'>
       
-        <div className="col-md-2 dash_menu">
-        <div className="left_menu">
-        <ul><li><a className="lang">Dashboard </a></li>
-            <li><Link to='/create-request' className="lang">Create Request</Link></li>
-            <li><Link to='/pending-requests' className="lang">Pending Requests</Link></li>
-            <li className='active_dash'><Link to='/user-active-requests' className="lang">Active Requests</Link></li>
-            <li><a className="lang">Closed Requests</a></li>
-            <li><Link to='/request-application-list' className="lang">Request Applications</Link></li>
-            <li><Link to='/user-logout' className="lang">Logout</Link></li>
-        </ul>
-        </div>
-        </div>
+        <Headeruser/>
         <div className='col-md-10 menu-right'>
         <div className="dashboard-right thanks_msg">
         <div className="content-left">

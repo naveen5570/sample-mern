@@ -295,3 +295,25 @@ h3.title { font-size:40px; line-height: 54px;}
 .language button, .lan {border:0px; box-shadow:0px 0px 0px 0px; background:transparent}
 
 .col-md-3.language{margin-top:10px;}
+
+.dash_box1 {background:#4B4CA8;  }
+.dash_box h2, .dash_box p {width:100%; color:#fff; }
+.dash_box {margin-top:40px; float:left; width:100%; padding:30px 20px;  min-height:120px; text-align:left;} 
+.dash_box2 {background:#FE8C05; }
+.dash_box3 {background:#A1D8FF; }
+.dash_box4 {background:#45E085; }
+.dashboard {padding-left:50px; padding-right:50px; background:#F0F6F6;}
+.notification_list {margin-bottom:40px;}
+.notification_list h5 {padding-bottom:30px;}
+.notification_list ul {padding:0;  overflow-y:auto; height:300px;}
+.notification_list ul li {list-style: none; padding-bottom:12px; padding-top:15px; border-bottom:1px solid #ddd;}
+.notification_list ul li p {margin-bottom:0; font-weight:600; font-size:14px; color:#999}
+.notification_list ul li span {font-size:12px; color: #000;}
+.dash_box span {float:left;}
+.dash_box span p {font-size:12px; letter-spacing:0.3px; font-weight:600;}
+.dash_box span h2 {font-weight:500;}
+.dash_box span img {margin-top:10px; margin-right: 8px;}
+.dashboard .col-md-3 {padding-left:5px; padding-right:5px;}
+
+
+

@@ -4,6 +4,7 @@ import axios from 'axios';
 import jwtDecode from 'jwt-decode';
 import { Link,useParams } from 'react-router-dom';
 import ReqCard from './AppCard';
+import Headeruser from './Headeruser';
 
 class RequestApplication extends Component {
   constructor(props) {
@@ -71,19 +72,7 @@ class RequestApplication extends Component {
       </div>
       <div className="container-fluid">
       <div className='row'>
-      <div className="col-md-2 dash_menu">
-        <div className="left_menu">
-        <ul><li><a className="lang">Dashboard </a></li>
-            <li><Link to='/create-request' className="lang">Create Request</Link></li>
-            <li><Link to='/pending-requests' className="lang">Pending Requests</Link></li>
-            <li className='active_dash'><Link to='/user-active-requests' className="lang">Active Requests</Link></li>
-            
-            <li><a className="lang">Closed Requests</a></li>
-            <li className='active_dash'><a className="lang">Request Applications</a></li>
-            <li><Link to='/user-logout' className="lang">Logout</Link></li>
-        </ul>
-        </div>
-        </div>
+      <Headeruser/>
         <div className='col-md-10 menu-right'>
       
       <div className="ShowBookList">

@@ -13,6 +13,7 @@
       homescreen on Android. See https://developers.google.com/web/fundamentals/web-app-manifest/
     -->
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    
     <!--
       Notice the use of %PUBLIC_URL% in the tags above.
       It will be replaced with the URL of the `public` folder during the build.
@@ -41,6 +42,9 @@
   </body>
 </html>
 <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.2.0/d3.min.js"  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="plugin.min.js"></script>
+
 <script>
   jQuery(document).ready(function($){
   $(document).on('change','#language',function(){
@@ -75,7 +79,72 @@ $(document).on('click','.lan',function(){
 });
 setTimeout(function() {
     $('#loader-container').fadeOut('fast');
-}, 9000);
+}, 1000);
+});
+
+
+
+// Graph
+
+var sampleData = [
+    {
+      id: 1, 
+      label: "75%", 
+      value: 75, 
+      color: "#1514AE"
+    },
+    {
+      id: 2, 
+      label: "35%", 
+      value: 35, 
+      color: "#FE8C05"
+    },
+    /*{
+      id: 3, 
+      label: "Net", 
+      value: 13.5, 
+      color: "#80c441"
+    }*/
+    // ...
+];
+
+
+
+$("#graph").donutgraph({
+
+
+  data:sampleData,
+  // wrapper element
+  container: "#graph",
+
+  // container element (span) for measuring label text
+  measureElement: "#measure",
+
+  // width & height of the donut chart
+  width: 250,
+  height: 250,
+
+  // ring width
+  donutWidth: 40,
+
+  // space angle between ring segments
+  padAngle: 0.02,
+
+  // duration of the animation
+  animationDuration: 750,
+
+  // label color
+  labelColor: "#9e9e9e",
+
+  // an array of colors
+  accentColor: ["#d81b60","#80c441"],
+
+  // an array of colors used for ring segments
+  colorSetting: ["#33876b","#559559","#77a347","#98b236","#bac024","#dcce12","#e0e0e0"],
+
+  // use color range as setted in colorSetting
+  useColorRange: true
+  
 });
 
 

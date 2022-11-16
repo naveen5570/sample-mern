@@ -51,7 +51,7 @@ class ProfessionalRegister extends Component {
           password:''
         });
         //alert(res.data.msg);
-        if(res.status==200)
+        if(res.status===200)
         {
         window.location.href = "/professional-phone-otp";
         }

@@ -61,6 +61,8 @@ import DisapproveProfessional from './components/DisapproveProfessional';
 import DisapprovedProfessional from './components/DisapprovedProfessional';
 import WaitingForApproval from './components/WaitingForApproval';
 import UpdateProfessionalProfile from './components/UpdateProfessionalProfile';
+import UserDashboard from './components/UserDashboard';
+import ProfessionalDashboard from './components/ProfessionalDashboard';
 
 // French routes
 
@@ -139,6 +141,8 @@ const App = () => {
           <Route path='/fr/professional' element={<Frphome/>} />
           <Route exact path='/admin/frhome' element={<Adminfrhome/>} />
           <Route exact path='/admin/frphome' element={<Adminfrphome/>} />
+          <Route exact path='/user-dashboard' element={<UserDashboard/>} />
+          <Route exact path='/professional-dashboard' element={<ProfessionalDashboard/>} />
           
           </Routes>
       

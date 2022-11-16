@@ -6,6 +6,7 @@ import Header from './Header';
 import jwtDecode from 'jwt-decode';
 import Stripe from 'react-stripe-checkout';
 import Headertop from './Headeradmintop';
+import Headeruser from './Headeruser';
 
 class ProfessionalApplyRequestForm extends Component {
   
@@ -88,19 +89,7 @@ class ProfessionalApplyRequestForm extends Component {
       <Headertop/>
 	  <div className='container-fluid'>
       <div className='row'>
-      <div className="col-md-2 dash_menu">
-        <div className="left_menu">
-        <ul><li><a className="lang">Dashboard </a></li>
-            <li><Link to='/create-request' className="lang">Create Request</Link></li>
-            <li><Link to='/pending-requests' className="lang">Pending Requests</Link></li>
-            <li className='active_dash'><Link to='/user-active-requests' className="lang">Active Requests</Link></li>
-            
-            <li><a>Closed Requests</a></li>
-            <li><Link to='/request-applications-list' className="lang">Request Applications</Link></li>
-            <li><Link to='/user-logout' className="lang">Logout</Link></li>
-        </ul>
-        </div>
-        </div>
+      <Headeruser/>
 		<div className='col-md-10 menu-right'>
       <div className="dashboard-right ">
     <div className="dashboard-cart">

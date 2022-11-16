@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import jwtDecode from 'jwt-decode';
 import ReqCard from './UserReqCardPendingApplied';
 import Headertop from './Headeradmintop';
+import Headeruser from './Headeruser';
 
 class ActiveRequests extends Component {
   constructor(props) {
@@ -18,7 +19,7 @@ class ActiveRequests extends Component {
     const token = localStorage.getItem("token");
     if(!token)
     {
-      window.location.href = "/";
+      window.location.href = "/login";
     }
     const u = jwtDecode(token);
     console.log(u.id);
@@ -54,19 +55,7 @@ class ActiveRequests extends Component {
 <Headertop/>
       <div className="container-fluid">
       <div className='row'>
-      <div className="col-md-2 dash_menu">
-        <div className="left_menu">
-        <ul><li><Link to="#" className="lang">Dashboard </Link></li>
-            <li><Link to='/create-request' className="lang">Create Request</Link></li>
-            <li ><Link to='/pending-requests' className="lang">Pending Requests</Link></li>
-            <li className='active_dash'><Link to='/user-active-requests' className="lang">Active Requests</Link></li>
-            
-            <li><Link to="#">Closed Requests</Link></li>
-            <li ><Link to='/request-applications-list' className="lang">Request Applications</Link></li>
-            <li><Link to='/user-logout' className="lang">Logout</Link></li>
-        </ul>
-        </div>
-        </div>
+      <Headeruser />
         <div className='col-md-10 menu-right'>
       
       <div className="ShowBookList">
