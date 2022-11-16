@@ -298,7 +298,7 @@ h3.title { font-size:40px; line-height: 54px;}
 
 .dash_box1 {background:#4B4CA8;  }
 .dash_box h2, .dash_box p {width:100%; color:#fff; }
-.dash_box {margin-top:40px; float:left; width:100%; padding:30px 20px;  min-height:120px; text-align:left;} 
+.dash_box {margin-top:40px; float:left; width:100%; padding:20px;  min-height:140px; text-align:left;} 
 .dash_box2 {background:#FE8C05; }
 .dash_box3 {background:#A1D8FF; }
 .dash_box4 {background:#45E085; }
